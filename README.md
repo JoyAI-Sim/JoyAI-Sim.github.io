@@ -4,7 +4,7 @@ This repository hosts the static project page for JoyAI-Sim.
 
 ## Live Site
 
-https://sellerbubble.github.io/joyai-sim-project-page/
+https://joyai-sim.github.io/joyai-sim-project-page/
 
 ## Contents
 
