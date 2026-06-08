@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="JoyAI-Sim GR-RL style page: a concise research page for robot-simulation-human data interconversion."
+    />
+    <title>JoyAI-Sim GR-RL</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="JoyAI-Sim homepage">
+        <span class="brand-icon"></span>
+        <span>JoyAI-Sim</span>
+      </a>
+      <nav class="nav" aria-label="Page navigation">
+        <a href="../">首页</a>
+        <a href="#framework">框架</a>
+        <a href="#capability">能力</a>
+        <a href="#generalization">泛化</a>
+        <a href="#robustness">鲁棒性</a>
+      </nav>
+      <div class="language">
+        <span>EN</span>
+        <strong>中文</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="date">2026 年 06 月 08 日</p>
+        <h1>JoyAI-Sim</h1>
+        <p class="subtitle">
+          面向 Robot ⇄ Simulation ⇄ Human 的仿真数据互转工具链，用可复现的数字孪生评估与物理一致性筛选，扩展机器人学习的数据边界。
+        </p>
+        <a class="primary-action" href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">项目主页</a>
+        <figure class="hero-card">
+          <img src="../assets/new/data_pyramid.png" alt="JoyAI-Sim robot simulation human data pyramid" />
+        </figure>
+      </section>
+
+      <section class="content-section" id="framework">
+        <h2>JoyAI-Sim 框架</h2>
+        <p>
+          JoyAI-Sim 将仿真置于具身数据金字塔的中心，用同一套工具链连接真实机器人数据、仿真数据与第一人称人类示范数据。真实机器人任务提供部署语义与成功标准，仿真环境提供可并行、可复位、可诊断的评估层，人类数据则提供规模化的行为先验与具身反馈。
+        </p>
+        <p>
+          这条链路包含两个方向：Robot → Simulation → Human 负责从真机任务出发构建数字孪生，并用人类体感反馈校准轨迹自然度；Human → Simulation → Robot 则把人类第一视角视频提升到仿真环境中，通过机器人约束筛选后转化为机器人视角观测和轨迹数据。
+        </p>
+        <div class="pipeline-tabs" aria-label="JoyAI-Sim pipeline modules">
+          <span>Digital Twin Replication</span>
+          <span>Naturalness Refinement</span>
+          <span>Cross-Embodiment Retargeting</span>
+          <span>Physical Consistency Guarantee</span>
+        </div>
+        <figure class="image-panel">
+          <img src="../assets/new/data_pyramid_alt.png" alt="JoyAI-Sim four-stage framework" loading="lazy" />
+          <figcaption>JoyAI-Sim 的四个核心环节：数字孪生复刻、自然度反馈、跨本体重定向与物理一致性保证。</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" id="capability">
+        <h2>长时序灵巧操作能力</h2>
+        <p>
+          在真实机器人侧，JoyAI-Sim 以 AgiBot G1 的长时序桌面整理任务作为部署锚点。任务要求模型理解语言指令、区分物体类别、选择正确目标区域，并在多步操作中保持稳定的抓取、搬运和放置能力。单纯依赖真机循环会带来低吞吐、难复现和高人工成本，因此系统先把任务重建为可批量运行的仿真评估环境。
+        </p>
+        <p>
+          数字孪生对齐机器人本体、场景资产、相机、光照、控制链路与任务判据，使模型可以先在仿真中进行高通量筛选，再回到真实机器人做最终验证。这样，失败不再只表现为一个总成功率，而可以被归因到机器人初始姿态、物体布局、物体实例、背景表面、光照或语言表达等具体扰动轴。
+        </p>
+        <figure class="image-panel">
+          <img src="../assets/new/r2s2h_toolchain.png" alt="Robot to Simulation to Human toolchain" loading="lazy" />
+          <figcaption>Robot → Simulation → Human：从真机任务到数字孪生，再到人类自然度反馈。</figcaption>
+        </figure>
+        <figure class="image-panel slim">
+          <img src="../assets/new/robot2sim_alignment.png" alt="Robot to simulation interaction alignment" loading="lazy" />
+          <figcaption>交互对齐让同一条控制命令可以在真机与仿真中复现，支持逐步比较与可诊断评估。</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" id="generalization">
+        <h2>对不同颜色鞋子的泛化能力</h2>
+        <p>
+          参考页展示的是策略对鞋带颜色与操作阶段的泛化。对应到 JoyAI-Sim，我们更关注模型在物体、容器、材质、光照和布局变化下是否仍能保持任务语义不变。仿真环境可以系统改变这些非语义因素，同时保持物体到目标区域的映射关系稳定，从而构造比真机更密集的泛化测试。
+        </p>
+        <p>
+          在数据生成侧，Human → Simulation → Robot 路径把人类视频中的手部运动、接近方向、抓取阶段和交互区域抽象为任务空间先验。随后仿真器根据机器人关节限制、可达空间、碰撞、夹爪范围、接触时序和目标区域完成度进行筛选，只保留物理可行且可回放的机器人中心轨迹。
+        </p>
+        <figure class="image-panel">
+          <img src="../assets/new/data_factory_plan.png" alt="Human to simulation to robot scalable data factory" loading="lazy" />
+          <figcaption>Human → Simulation → Robot 数据工厂：从人类示范到仿真重定向、视频渲染与真实感增强。</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" id="robustness">
+        <h2>多种情景下的鲁棒性</h2>
+        <p>
+          JoyAI-Sim 不把鲁棒性简化为单一平均分，而是将评估拆解到可控扰动维度。真实机器人提供最可信的部署信号，仿真环境则用于大规模复现、重置和扰动。两者结合后，研究者可以更快发现策略在感知、接近、抓取、搬运、放置或语言 grounding 中的薄弱点。
+        </p>
+        <ul class="bullet-list">
+          <li>SimReady 资产库覆盖 295 个细粒度类别、53,661 个资产实例，其中 Home 类占 62.4%。</li>
+          <li>仿真数据生成结合虚拟遥操作、FSM、IKFlow 和强化学习，覆盖从种子示范到自动探索的多个阶段。</li>
+          <li>人类体感反馈用于识别逐帧评估器难以发现的全局策略偏差，例如接近路径不自然或阶段过渡缺少预调整。</li>
+        </ul>
+        <div class="figure-grid">
+          <figure class="image-panel">
+            <img src="../assets/new/simready_bar.png" alt="SimReady asset bar chart" loading="lazy" />
+          </figure>
+          <figure class="image-panel">
+            <img src="../assets/new/s2h_flow.png" alt="Simulation to human naturalness flow" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-icon"></span>
+        <span>JoyAI-Sim</span>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <strong>模型成果</strong>
+          <a href="../">JoyAI-Sim</a>
+          <a href="#framework">Framework</a>
+          <a href="#capability">Evaluation</a>
+        </div>
+        <div>
+          <strong>研究团队</strong>
+          <a href="#generalization">Human-Sim-Robot</a>
+          <a href="#robustness">Robotics</a>
+          <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">GitHub</a>
+        </div>
+        <div>
+          <strong>了解更多</strong>
+          <a href="../">项目首页</a>
+          <a href="https://joyai-sim.github.io/">主页链接</a>
+        </div>
+      </div>
+      <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
+    </footer>
+  </body>
+</html>
