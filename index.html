@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="JoyAI-Sim project page: a simulation toolchain for robot evaluation and data value-added services."
+    />
+    <title>JoyAI-Sim | Robot Simulation Toolchain</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="site-backdrop" aria-hidden="true">
+      <div class="site-backdrop-base"></div>
+      <div class="site-backdrop-grid"></div>
+      <div class="site-backdrop-grid site-backdrop-grid-highlight"></div>
+      <div class="site-backdrop-glow"></div>
+      <div class="site-backdrop-vignette"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="JoyAI-Sim home">
+        <span class="brand-mark">J</span>
+        <span>JoyAI-Sim</span>
+      </a>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="#toolchain">Toolchain</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#data-service">Data Service</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#cloud">Cloud</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="hero-kicker">Digital twins for embodied AI</p>
+          <h1>JoyAI-Sim turns robot evaluation and data generation into one simulation toolchain.</h1>
+          <p class="hero-lead">
+            A bidirectional workflow that maps real robot tasks into scalable simulation, uses human embodied feedback
+            to judge trajectory naturalness, and converts human demonstrations into robot-centered training data.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="btn btn-primary" href="#toolchain">Explore toolchain</a>
+            <a class="btn btn-secondary" href="#gallery">View demos</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="media-frame hero-frame">
+            <video autoplay muted loop playsinline poster="./assets/media/slide3_preview.png">
+              <source src="./assets/media/slide3_overview.mp4" type="video/mp4" />
+              <img src="./assets/media/slide3_preview.png" alt="JoyAI-Sim toolchain overview" />
+            </video>
+          </div>
+          <div class="metric-row" aria-label="JoyAI-Sim highlights">
+            <div>
+              <strong>53,661</strong>
+              <span>simulation-ready assets</span>
+            </div>
+            <div>
+              <strong>295</strong>
+              <span>fine-grained categories</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>closed-loop services</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-shell" id="toolchain">
+        <div class="section-heading reveal">
+          <p class="section-label">Two linked paths</p>
+          <h2>From deployment targets to training data assets.</h2>
+          <p>
+            JoyAI-Sim organizes simulation as a toolchain, not just a renderer. One path evaluates robot policies
+            before costly hardware trials; the other converts human behavior data into robot-consumable samples.
+          </p>
+        </div>
+
+        <div class="path-grid">
+          <article class="path-panel reveal">
+            <div class="path-line">Robot <span>→</span> Simulation <span>→</span> Human</div>
+            <h3>Efficient model evaluation</h3>
+            <p>
+              Real robot tasks define the deployment goal. Digital twins reproduce scene layout, robot embodiment,
+              sensing, control, and success predicates so policies can be screened at scale. Human embodied feedback
+              then checks whether feasible trajectories also feel natural.
+            </p>
+            <ul class="check-list">
+              <li>Parallel simulation trials with repeatable resets</li>
+              <li>Controlled perturbations over layout, objects, language, and lighting</li>
+              <li>Human feedback for global trajectory naturalness</li>
+            </ul>
+          </article>
+
+          <article class="path-panel path-panel-accent reveal">
+            <div class="path-line">Human <span>→</span> Simulation <span>→</span> Robot</div>
+            <h3>Data value-added service</h3>
+            <p>
+              Ego-centric human videos are lifted into simulation-ready demonstrations through hand-motion recovery,
+              scene reconstruction, and digital-twin authoring. Simulation retargets feasible motion to robots and
+              expands it into robot-view trajectories.
+            </p>
+            <ul class="check-list">
+              <li>Human video becomes a metric, executable task instance</li>
+              <li>Physics filters impossible contacts, collisions, and unreachable motion</li>
+              <li>Randomized rendering creates diverse robot training observations</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-ink" id="evaluation">
+        <div class="section-shell split-section">
+          <div class="section-heading reveal">
+            <p class="section-label">Path 1</p>
+            <h2>Robot → Simulation: make hardware tasks reproducible.</h2>
+            <p>
+              The real robot benchmark anchors task semantics, object-target mappings, reset states, and final
+              deployment validation. JoyAI-Sim reconstructs those conditions as a digital twin for scalable diagnostic
+              evaluation.
+            </p>
+          </div>
+          <div class="evidence-stack reveal">
+            <div class="evidence-card">
+              <span>Home assets</span>
+              <strong>33,490</strong>
+              <p>62.4% of the simulation-ready library covers household scenes.</p>
+            </div>
+            <div class="evidence-card">
+              <span>Study + Kitchen</span>
+              <strong>71.8%</strong>
+              <p>The dominant Home sub-scenes match long-horizon tidy-up tasks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-shell image-pair">
+          <figure class="figure-card reveal">
+            <img src="./assets/images/simready_bar.png" alt="JoyAI-Sim asset category statistics" />
+            <figcaption>Asset coverage by fine-grained object category.</figcaption>
+          </figure>
+          <figure class="figure-card reveal">
+            <img src="./assets/images/simready_sunburst.png" alt="JoyAI-Sim home-scene distribution" />
+            <figcaption>Home-scene distribution across study, kitchen, living room, bedroom, and other rooms.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-shell alignment-grid">
+          <article class="alignment-copy reveal">
+            <h3>Simulation as a diagnostic layer</h3>
+            <p>
+              Once the physical scene and robot interaction loop are aligned, the same task can be replayed under
+              controlled changes in robot state, object layout, object instance, background, instruction, and
+              illumination. Failures become attributable instead of being collapsed into one success rate.
+            </p>
+          </article>
+          <figure class="figure-card reveal">
+            <img src="./assets/images/robot2sim.png" alt="Robot-to-simulation alignment diagram" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-shell human-loop">
+        <div class="section-heading reveal">
+          <p class="section-label">Simulation → Human</p>
+          <h2>Physics feasibility is not enough. Trajectories also need embodied plausibility.</h2>
+          <p>
+            JoyAI-Sim synthesizes trajectories with FSM+IK, IKFlow, and reinforcement learning. Human operators then
+            simulate the robot end-effector motion in hand space, surfacing awkward approach paths, missing
+            anticipatory adjustments, and phase transitions that look valid but feel wrong.
+          </p>
+        </div>
+        <div class="method-strip">
+          <div class="method reveal">
+            <strong>FSM + IK</strong>
+            <span>Bootstraps seed data without demonstrations.</span>
+          </div>
+          <div class="method reveal">
+            <strong>IKFlow</strong>
+            <span>Expands one feasible trajectory into diverse smooth rollouts.</span>
+          </div>
+          <div class="method reveal">
+            <strong>RL generation</strong>
+            <span>Explores robust strategies for contact-rich and long-horizon tasks.</span>
+          </div>
+        </div>
+        <figure class="wide-figure reveal">
+          <img src="./assets/images/sim2human.png" alt="Simulation-to-human trajectory naturalness feedback" />
+        </figure>
+      </section>
+
+      <section class="section section-shell data-service" id="data-service">
+        <div class="section-heading reveal">
+          <p class="section-label">Path 2</p>
+          <h2>Human → Simulation → Robot: convert human behavior into robot training resources.</h2>
+          <p>
+            First-person human demonstrations are not directly executable by robots. JoyAI-Sim routes them through
+            simulation, where motion, scene, and contacts can be grounded, filtered, randomized, and rendered from the
+            robot point of view.
+          </p>
+        </div>
+
+        <div class="service-flow">
+          <div class="service-step reveal">
+            <span>01</span>
+            <h3>Recover human motion</h3>
+            <p>Extract wrist trajectory, fingertip contact, and grasp or release events from ego-centric video.</p>
+          </div>
+          <div class="service-step reveal">
+            <span>02</span>
+            <h3>Author a digital twin</h3>
+            <p>Reconstruct objects, containers, support surfaces, camera geometry, and task-relevant assets.</p>
+          </div>
+          <div class="service-step reveal">
+            <span>03</span>
+            <h3>Retarget and filter</h3>
+            <p>Enforce reachability, joint limits, collision constraints, contact timing, and physical consistency.</p>
+          </div>
+          <div class="service-step reveal">
+            <span>04</span>
+            <h3>Render robot data</h3>
+            <p>Output robot-view videos, states, actions, trajectories, and task labels for downstream learning.</p>
+          </div>
+        </div>
+
+        <div class="split-section service-media">
+          <figure class="figure-card reveal">
+            <img src="./assets/images/r2s2h.png" alt="Human to simulation to robot data path" />
+          </figure>
+          <div class="augmentation-card reveal">
+            <h3>Simulation-side data expansion</h3>
+            <p>
+              From the same human seed, the simulator can vary object positions, container layouts, object combinations,
+              materials, lighting, background, and camera appearance while preserving task feasibility. The result is a
+              scalable data asset: cheap human video becomes verified robot-centered training data.
+            </p>
+            <div class="tag-cloud" aria-label="Augmentation axes">
+              <span>object pose</span>
+              <span>container layout</span>
+              <span>material</span>
+              <span>lighting</span>
+              <span>background</span>
+              <span>robot view</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-gallery" id="gallery">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="section-label">Media evidence</p>
+            <h2>Project visuals built from the current JoyAI-Sim deck.</h2>
+            <p>
+              The page uses the same GIFs and PowerPoint-native exports prepared for the presentation, keeping the
+              online version visually aligned with the slide narrative.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-item gallery-large reveal">
+              <video controls muted loop playsinline poster="./assets/media/slide3_preview.png">
+                <source src="./assets/media/slide3_overview.mp4" type="video/mp4" />
+              </video>
+              <div>
+                <h3>Complete JoyAI-Sim toolchain</h3>
+                <p>Robot evaluation and data value-added service in one visual overview.</p>
+              </div>
+            </article>
+            <article class="gallery-item reveal">
+              <video controls muted loop playsinline poster="./assets/media/three_videos_preview.png">
+                <source src="./assets/media/three_videos_compact.mp4" type="video/mp4" />
+              </video>
+              <div>
+                <h3>Robot, simulation, and human views</h3>
+                <p>Synchronized visual evidence for cross-domain alignment.</p>
+              </div>
+            </article>
+            <article class="gallery-item reveal">
+              <video controls muted loop playsinline poster="./assets/media/slide2_preview.png">
+                <source src="./assets/media/slide2_overview.mp4" type="video/mp4" />
+              </video>
+              <div>
+                <h3>Path diagram draft</h3>
+                <p>Earlier layout with the same embedded synchronized media.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-shell cloud" id="cloud">
+        <div class="cloud-panel reveal">
+          <div>
+            <p class="section-label">JoyBuilder Cloud Service</p>
+            <h2>A managed data-conversion workflow for embodied AI.</h2>
+          </div>
+          <p>
+            JoyAI-Sim can be packaged as a cloud-native service: users provide human ego-centric operation videos or
+            robot task definitions, and the platform orchestrates reconstruction, simulation execution, rendering,
+            realism enhancement, and dataset versioning.
+          </p>
+          <div class="cloud-actions">
+            <a class="btn btn-primary" href="#top">Back to top</a>
+            <a class="btn btn-secondary" href="./README.md">Implementation notes</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell">
+        <span>JoyAI-Sim project page draft</span>
+        <span>Built from local JoyAI_Sim.zip and presentation assets.</span>
+      </div>
+    </footer>
+  </body>
+</html>
