@@ -107,34 +107,11 @@ video {
 }
 
 .site-backdrop-grid {
-  inset: -8%;
-  background-image:
-    linear-gradient(rgba(31, 61, 122, 0.38) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 61, 122, 0.38) 1px, transparent 1px);
-  background-size: var(--grid-size) var(--grid-size);
-  opacity: 0.48;
+  display: none;
 }
 
 .site-backdrop-grid-highlight {
-  background-image:
-    linear-gradient(rgba(5, 225, 253, 0.9) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 225, 253, 0.9) 1px, transparent 1px);
-  opacity: 0.82;
-  mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(
-    circle at var(--pointer-x) var(--pointer-y),
-    rgba(0, 0, 0, 0.96) 0,
-    rgba(0, 0, 0, 0.84) 12%,
-    rgba(0, 0, 0, 0.32) 26%,
-    transparent 42%
-  );
-  mask-image: radial-gradient(
-    circle at var(--pointer-x) var(--pointer-y),
-    rgba(0, 0, 0, 0.96) 0,
-    rgba(0, 0, 0, 0.84) 12%,
-    rgba(0, 0, 0, 0.32) 26%,
-    transparent 42%
-  );
+  display: none;
 }
 
 .site-backdrop-glow {
