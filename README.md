@@ -13,6 +13,10 @@ https://joyai-sim.github.io/joyai-sim-project-page/
 - `app.js`: sticky header, reveal behavior, media playback handling, and pointer-following glow
 - `assets/`: images and media used by the page
 
+## Current Revision
+
+The current page content is updated from the latest JoyAI-Sim paper package, `JoyAI_Sim (1).zip`, and follows the JoyAI-RA project-page rhythm: compact hero, paper-style section titles, concise technical paragraphs, large evidence figures, and result cards.
+
 ## Local Preview
 
 ```bash
