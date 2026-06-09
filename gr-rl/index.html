@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="JoyAI-Sim GR-RL style page: a concise research page for robot-simulation-human data interconversion."
+      content="JoyAI-Sim project page: robot-simulation-human data interconversion, scalable evaluation, and data enrichment."
     />
-    <title>JoyAI-Sim GR-RL</title>
+    <title>JoyAI-Sim</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -19,9 +19,9 @@
       <nav class="nav" aria-label="Page navigation">
         <a href="../">首页</a>
         <a href="#framework">框架</a>
-        <a href="#capability">能力</a>
-        <a href="#generalization">泛化</a>
-        <a href="#robustness">鲁棒性</a>
+        <a href="#evaluation">测评</a>
+        <a href="#enrichment">增值</a>
+        <a href="#robustness">验证</a>
       </nav>
       <div class="language">
         <span>EN</span>
@@ -38,7 +38,7 @@
         </p>
         <a class="primary-action" href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">项目主页</a>
         <figure class="hero-card">
-          <img src="../assets/new/data_pyramid.png" alt="JoyAI-Sim robot simulation human data pyramid" />
+          <img src="../assets/media/slide3_overview.gif" alt="JoyAI-Sim robot simulation human synchronized overview" />
         </figure>
       </section>
 
@@ -62,8 +62,8 @@
         </figure>
       </section>
 
-      <section class="content-section" id="capability">
-        <h2>长时序灵巧操作能力</h2>
+      <section class="content-section" id="evaluation">
+        <h2>可规模化的模型测评</h2>
         <p>
           在真实机器人侧，JoyAI-Sim 以 AgiBot G1 的长时序桌面整理任务作为部署锚点。任务要求模型理解语言指令、区分物体类别、选择正确目标区域，并在多步操作中保持稳定的抓取、搬运和放置能力。单纯依赖真机循环会带来低吞吐、难复现和高人工成本，因此系统先把任务重建为可批量运行的仿真评估环境。
         </p>
@@ -80,13 +80,13 @@
         </figure>
       </section>
 
-      <section class="content-section" id="generalization">
-        <h2>对不同颜色鞋子的泛化能力</h2>
+      <section class="content-section" id="enrichment">
+        <h2>Human → Simulation → Robot 数据增值</h2>
         <p>
-          参考页展示的是策略对鞋带颜色与操作阶段的泛化。对应到 JoyAI-Sim，我们更关注模型在物体、容器、材质、光照和布局变化下是否仍能保持任务语义不变。仿真环境可以系统改变这些非语义因素，同时保持物体到目标区域的映射关系稳定，从而构造比真机更密集的泛化测试。
+          JoyAI-Sim 将海量第一人称人类示范提升到仿真环境中，使原本与具体机器人本体无关的行为视频可以被重新解释为可检查、可重放、可筛选的任务过程。系统先从人类视频中抽取手部运动、接近方向、抓取阶段和交互区域，再在仿真中引入机器人本体约束完成重定向。
         </p>
         <p>
-          在数据生成侧，Human → Simulation → Robot 路径把人类视频中的手部运动、接近方向、抓取阶段和交互区域抽象为任务空间先验。随后仿真器根据机器人关节限制、可达空间、碰撞、夹爪范围、接触时序和目标区域完成度进行筛选，只保留物理可行且可回放的机器人中心轨迹。
+          随后，仿真器根据关节限制、可达空间、碰撞、夹爪范围、接触时序和目标区域完成度进行物理可行性筛选，只保留能够被机器人执行的轨迹，并渲染为机器人视角观测。这样，人类行为数据不只是被“看见”，而是被转化为可以进入机器人学习流程的训练资源。
         </p>
         <figure class="image-panel">
           <img src="../assets/new/data_factory_plan.png" alt="Human to simulation to robot scalable data factory" loading="lazy" />
@@ -125,11 +125,11 @@
           <strong>模型成果</strong>
           <a href="../">JoyAI-Sim</a>
           <a href="#framework">Framework</a>
-          <a href="#capability">Evaluation</a>
+          <a href="#evaluation">Evaluation</a>
         </div>
         <div>
           <strong>研究团队</strong>
-          <a href="#generalization">Human-Sim-Robot</a>
+          <a href="#enrichment">Human-Sim-Robot</a>
           <a href="#robustness">Robotics</a>
           <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">GitHub</a>
         </div>
