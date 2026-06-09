@@ -20,8 +20,8 @@
         <a href="../">首页</a>
         <a href="#framework">框架</a>
         <a href="#evaluation">测评</a>
-        <a href="#enrichment">增值</a>
-        <a href="#robustness">验证</a>
+        <a href="#enrichment">数据增值</a>
+        <a href="#access">体验</a>
       </nav>
       <div class="language">
         <span>EN</span>
@@ -31,12 +31,12 @@
 
     <main>
       <section class="hero">
-        <p class="date">2026 年 06 月 08 日</p>
+        <p class="date">2026 年 04 月 16 日</p>
         <h1>JoyAI-Sim</h1>
         <p class="subtitle">
-          面向 Robot ⇄ Simulation ⇄ Human 的仿真数据互转工具链，用可复现的数字孪生评估与物理一致性筛选，扩展机器人学习的数据边界。
+          面向具身数据金字塔的仿真转换工具链，一站式实现具身数据的增值转换与泛化扩增。
         </p>
-        <a class="primary-action" href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">项目主页</a>
+        <a class="primary-action" href="#access">试用 JoyBuilder</a>
         <figure class="hero-card">
           <img src="../assets/media/slide3_overview.gif" alt="JoyAI-Sim robot simulation human synchronized overview" />
         </figure>
@@ -45,10 +45,10 @@
       <section class="content-section" id="framework">
         <h2>JoyAI-Sim 框架</h2>
         <p>
-          JoyAI-Sim 将仿真置于具身数据金字塔的中心，用同一套工具链连接真实机器人数据、仿真数据与第一人称人类示范数据。真实机器人任务提供部署语义与成功标准，仿真环境提供可并行、可复位、可诊断的评估层，人类数据则提供规模化的行为先验与具身反馈。
+          技术报告 JoyAI-Sim 针对具身领域广泛存在的测评效率与数据瓶颈问题，结合数据金字塔提出 Robot ⇌ Simulation ⇌ Human 仿真数据转换工具链。它一端连接稀缺但贴近真实部署的机器人数据，另一端连接丰富但与本体无关的人类数据，最终实现数据与评测的双向贯通。
         </p>
         <p>
-          这条链路包含两个方向：Robot → Simulation → Human 负责从真机任务出发构建数字孪生，并用人类体感反馈校准轨迹自然度；Human → Simulation → Robot 则把人类第一视角视频提升到仿真环境中，通过机器人约束筛选后转化为机器人视角观测和轨迹数据。
+          JoyAI-Sim 同时支持金字塔自顶向下的 Robot → Simulation → Human 高效模型测评服务，以及金字塔自底向上的 Human → Simulation → Robot 数据增值服务。通过京东云 JoyBuilder 平台，开发者可以获得一站式的具身仿真服务。
         </p>
         <div class="pipeline-tabs" aria-label="JoyAI-Sim pipeline modules">
           <span>Digital Twin Replication</span>
@@ -63,12 +63,21 @@
       </section>
 
       <section class="content-section" id="evaluation">
-        <h2>可规模化的模型测评</h2>
+        <h2>基于仿真工具链的高效模型测评</h2>
         <p>
-          在真实机器人侧，JoyAI-Sim 以 AgiBot G1 的长时序桌面整理任务作为部署锚点。任务要求模型理解语言指令、区分物体类别、选择正确目标区域，并在多步操作中保持稳定的抓取、搬运和放置能力。单纯依赖真机循环会带来低吞吐、难复现和高人工成本，因此系统先把任务重建为可批量运行的仿真评估环境。
+          通过 Robot → Simulation → Human 的仿真工具链，JoyAI-Sim 可实现比真机测评更加高效的模型测评。系统以真实机器人任务定义部署目标，借助数字孪生完成可规模化的仿真评测与轨迹合成，并引入人类具身反馈检验仿真动作的自然度，构建贯通“真机测评—仿真测评—人类感知”的闭环评测链路。
         </p>
         <p>
-          数字孪生对齐机器人本体、场景资产、相机、光照、控制链路与任务判据，使模型可以先在仿真中进行高通量筛选，再回到真实机器人做最终验证。这样，失败不再只表现为一个总成功率，而可以被归因到机器人初始姿态、物体布局、物体实例、背景表面、光照或语言表达等具体扰动轴。
+          Robot → Simulation 阶段以真实机器人任务为锚点，将任务语义、物体资产、场景布局、机器人本体、相机配置、控制接口和成功判据映射到数字孪生中，形成可复现、可并行、可诊断的仿真评测环境。JoyAI-Sim 综合运用 3D 重建技术构建面向家居场景的 Sim-Ready 资产库，覆盖 295 个细粒度类别、53,661 个资产实例，并支持在多个仿真器中对机器人状态、物体布局、实例变化、背景、语言和光照等维度进行所见即所得的调整。
+        </p>
+        <figure class="video-panel">
+          <video autoplay muted loop playsinline poster="../assets/media/slide2_preview.png">
+            <source src="../assets/media/slide2_overview.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Robot → Simulation → Human：从真机测评到仿真评测，再到人类具身感知反馈。</figcaption>
+        </figure>
+        <p>
+          Simulation → Human 阶段在仿真中通过 FSM+IK、IKFlow 和强化学习生成或扩增机器人轨迹，并进一步引入人类具身反馈评估轨迹自然度。人类操作者通过模拟执行仿真轨迹，识别接近策略、阶段过渡和动作流畅性中的不合理模式，从而筛除虽然物理可行但不符合人类运动直觉的轨迹。
         </p>
         <figure class="image-panel">
           <img src="../assets/new/r2s2h_toolchain.png" alt="Robot to Simulation to Human toolchain" loading="lazy" />
@@ -81,12 +90,21 @@
       </section>
 
       <section class="content-section" id="enrichment">
-        <h2>Human → Simulation → Robot 数据增值</h2>
+        <h2>基于仿真工具链的数据增值服务</h2>
         <p>
-          JoyAI-Sim 将海量第一人称人类示范提升到仿真环境中，使原本与具体机器人本体无关的行为视频可以被重新解释为可检查、可重放、可筛选的任务过程。系统先从人类视频中抽取手部运动、接近方向、抓取阶段和交互区域，再在仿真中引入机器人本体约束完成重定向。
+          通过 Human → Simulation → Robot 仿真工具链，JoyAI-Sim 以第一人称人类示范视频作为数据源，借助手部运动恢复、场景重建与数字孪生构建，将原本与机器人本体无关的人类行为转化为可在仿真中执行和验证的任务。
         </p>
         <p>
-          随后，仿真器根据关节限制、可达空间、碰撞、夹爪范围、接触时序和目标区域完成度进行物理可行性筛选，只保留能够被机器人执行的轨迹，并渲染为机器人视角观测。这样，人类行为数据不只是被“看见”，而是被转化为可以进入机器人学习流程的训练资源。
+          Human → Simulation 阶段从人类第一视角视频中提取手部轨迹、抓取/释放事件、物体交互关系与场景几何结构，并构建仿真可执行的数字孪生环境，使人类视频从单纯视觉记录转化为带有空间结构、交互关系和任务语义的仿真实例。
+        </p>
+        <figure class="video-panel">
+          <video autoplay muted loop playsinline poster="../assets/media/slide3_preview.png">
+            <source src="../assets/media/slide3_overview.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Human → Simulation → Robot：从人类示范数据到仿真数据，再到机器人训练数据。</figcaption>
+        </figure>
+        <p>
+          Simulation → Robot 阶段在仿真环境中完成机器人本体适配与物理可行性验证，筛除关节越界、碰撞、不可达和接触不合理的动作；同时通过改变物体位置、容器布局、物体组合、颜色材质、光照和背景等因素，从同一条人类示范派生出多样化但仍物理可行的机器人轨迹与观测视频。
         </p>
         <figure class="image-panel">
           <img src="../assets/new/data_factory_plan.png" alt="Human to simulation to robot scalable data factory" loading="lazy" />
@@ -94,23 +112,19 @@
         </figure>
       </section>
 
-      <section class="content-section" id="robustness">
-        <h2>多种情景下的鲁棒性</h2>
+      <section class="content-section" id="access">
+        <h2>试用与体验入口</h2>
         <p>
-          JoyAI-Sim 不把鲁棒性简化为单一平均分，而是将评估拆解到可控扰动维度。真实机器人提供最可信的部署信号，仿真环境则用于大规模复现、重置和扰动。两者结合后，研究者可以更快发现策略在感知、接近、抓取、搬运、放置或语言 grounding 中的薄弱点。
+          欢迎通过京东云 JoyBuilder 平台体验 JoyAI-Sim 具身仿真服务。平台提供仿真服务创建、管理、查看、连接、云端资产挂载、数据增强实践案例与数据交易入口，帮助开发者将仿真评测和数据增值流程接入真实研发工作。
         </p>
-        <ul class="bullet-list">
-          <li>SimReady 资产库覆盖 295 个细粒度类别、53,661 个资产实例，其中 Home 类占 62.4%。</li>
-          <li>仿真数据生成结合虚拟遥操作、FSM、IKFlow 和强化学习，覆盖从种子示范到自动探索的多个阶段。</li>
-          <li>人类体感反馈用于识别逐帧评估器难以发现的全局策略偏差，例如接近路径不自然或阶段过渡缺少预调整。</li>
-        </ul>
-        <div class="figure-grid">
-          <figure class="image-panel">
-            <img src="../assets/new/simready_bar.png" alt="SimReady asset bar chart" loading="lazy" />
-          </figure>
-          <figure class="image-panel">
-            <img src="../assets/new/s2h_flow.png" alt="Simulation to human naturalness flow" loading="lazy" />
-          </figure>
+        <div class="link-grid">
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">创建仿真服务</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/manage-embodiedsimulation">管理仿真服务</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/check-embodiedsimulation">查看仿真服务</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/embodiedsimulation-isaacsimclient">连接仿真服务</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/mountedasset">挂载云端仿真资产</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/Notebook-Cosmos-Transfer">具身仿真数据增强实践案例</a>
+          <a href="https://robotdata.jdcloud.com/model-dev">数据交易平台</a>
         </div>
       </section>
     </main>
@@ -130,13 +144,13 @@
         <div>
           <strong>研究团队</strong>
           <a href="#enrichment">Human-Sim-Robot</a>
-          <a href="#robustness">Robotics</a>
+          <a href="#access">JoyBuilder</a>
           <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">GitHub</a>
         </div>
         <div>
           <strong>了解更多</strong>
-          <a href="../">项目首页</a>
-          <a href="https://joyai-sim.github.io/">主页链接</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">创建仿真服务</a>
+          <a href="https://robotdata.jdcloud.com/model-dev">数据交易平台</a>
         </div>
       </div>
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
