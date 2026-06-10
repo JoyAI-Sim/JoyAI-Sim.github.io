@@ -76,6 +76,26 @@
           </video>
           <figcaption>Robot → Simulation → Human：从真机测评到仿真评测，再到人类具身感知反馈。</figcaption>
         </figure>
+        <div class="video-grid two-up" aria-label="Robot simulation evaluation videos">
+          <figure class="video-card">
+            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/robot-sim-comparison.jpg">
+              <source src="./assets/media/joyai-sim-videos/robot-sim-comparison.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <strong>Robot / Sim 对齐</strong>
+              <span>同一任务在真机与仿真中并排回放，用于检查场景、相机与交互过程的一致性。</span>
+            </figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/real-robot-rollout.jpg">
+              <source src="./assets/media/joyai-sim-videos/real-robot-rollout.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <strong>真实机器人任务</strong>
+              <span>以 G1 top-camera 任务轨迹作为部署锚点，向数字孪生映射任务语义与成功判据。</span>
+            </figcaption>
+          </figure>
+        </div>
         <p>
           Simulation → Human 阶段在仿真中通过 FSM+IK、IKFlow 和强化学习生成或扩增机器人轨迹，并进一步引入人类具身反馈评估轨迹自然度。人类操作者通过模拟执行仿真轨迹，识别接近策略、阶段过渡和动作流畅性中的不合理模式，从而筛除虽然物理可行但不符合人类运动直觉的轨迹。
         </p>
@@ -103,6 +123,35 @@
           </video>
           <figcaption>Human → Simulation → Robot：从人类示范数据到仿真数据，再到机器人训练数据。</figcaption>
         </figure>
+        <div class="process-videos" aria-label="Human simulation robot data enrichment videos">
+          <figure class="video-card">
+            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/human-demo.jpg">
+              <source src="./assets/media/joyai-sim-videos/human-demo.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <strong>Human Demonstration</strong>
+              <span>第一人称人类示范提供抓取阶段、交互区域与任务语义。</span>
+            </figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/masked-interaction.jpg">
+              <source src="./assets/media/joyai-sim-videos/masked-interaction.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <strong>Simulation Processing</strong>
+              <span>分割与多视角处理把视觉记录转化为可执行、可验证的仿真实例。</span>
+            </figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/multiview-alignment.jpg">
+              <source src="./assets/media/joyai-sim-videos/multiview-alignment.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <strong>Robot Observation</strong>
+              <span>多视角机器人观测用于形成可训练的轨迹、状态与动作数据。</span>
+            </figcaption>
+          </figure>
+        </div>
         <p>
           Simulation → Robot 阶段在仿真环境中完成机器人本体适配与物理可行性验证，筛除关节越界、碰撞、不可达和接触不合理的动作；同时通过改变物体位置、容器布局、物体组合、颜色材质、光照和背景等因素，从同一条人类示范派生出多样化但仍物理可行的机器人轨迹与观测视频。
         </p>

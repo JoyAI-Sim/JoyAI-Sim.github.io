@@ -1,0 +1,182 @@
+[
+  {
+    "file": "assets/video_sources/extracted/0511 (1)_mirror_20260521_202256 (1).mp4",
+    "width": 1728,
+    "height": 1080,
+    "fps": "30/1",
+    "duration": 12.47,
+    "size_mb": 1.66,
+    "bit_rate": "1118124",
+    "nb_frames": "374"
+  },
+  {
+    "file": "assets/video_sources/extracted/3DVideo_2026-05-22-11-48-11-948 (2).mp4",
+    "width": 2048,
+    "height": 1536,
+    "fps": "60/1",
+    "duration": 12.624292,
+    "size_mb": 78.89,
+    "bit_rate": "52421279",
+    "nb_frames": "756"
+  },
+  {
+    "file": "assets/video_sources/extracted/3DVideo_2026-05-22-11-51-15-646 (1).mp4",
+    "width": 2048,
+    "height": 1536,
+    "fps": "60/1",
+    "duration": 12.402796,
+    "size_mb": 77.88,
+    "bit_rate": "52675863",
+    "nb_frames": "741"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260602-204333-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "1265625/42232",
+    "duration": 13.51424,
+    "size_mb": 6.12,
+    "bit_rate": "3796476",
+    "nb_frames": "405"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260602-204542-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "37800000/1261403",
+    "duration": 12.622083,
+    "size_mb": 5.8,
+    "bit_rate": "3853762",
+    "nb_frames": "378"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260608-201705-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "52300000/1744847",
+    "duration": 17.44847,
+    "size_mb": 7.96,
+    "bit_rate": "3828269",
+    "nb_frames": "523"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260608-201736-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "8900000/297013",
+    "duration": 11.89075,
+    "size_mb": 5.33,
+    "bit_rate": "3758436",
+    "nb_frames": "356"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260608-201756-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "12200000/407131",
+    "duration": 12.21775,
+    "size_mb": 5.58,
+    "bit_rate": "3828829",
+    "nb_frames": "366"
+  },
+  {
+    "file": "assets/video_sources/extracted/com.oculus.vrshell-20260608-201817-0.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": "55500000/1851539",
+    "duration": 18.51539,
+    "size_mb": 8.49,
+    "bit_rate": "3846914",
+    "nb_frames": "555"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/0511 (1).mp4",
+    "width": 1728,
+    "height": 1080,
+    "fps": "30/1",
+    "duration": 12.469002,
+    "size_mb": 3.97,
+    "bit_rate": "2672017",
+    "nb_frames": "374"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/clip_jd000023yyqw620260318V1005772_000000.mp4",
+    "width": 5760,
+    "height": 2880,
+    "fps": "541000000/9016629",
+    "duration": 9.016629,
+    "size_mb": 54.12,
+    "bit_rate": "50348070",
+    "nb_frames": "541"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/episode_1002_three_views.mp4",
+    "width": 2336,
+    "height": 400,
+    "fps": "30/1",
+    "duration": 12.2,
+    "size_mb": 9.31,
+    "bit_rate": "6399749",
+    "nb_frames": "366"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/g1_top_camera_direct_chaji_20260609-175101_r001_20260609_175638_trim.mp4",
+    "width": 1280,
+    "height": 800,
+    "fps": "30/1",
+    "duration": 9.533333,
+    "size_mb": 2.22,
+    "bit_rate": "1953492",
+    "nb_frames": "286"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/output_web_7M.mp4",
+    "width": 2048,
+    "height": 1536,
+    "fps": "60/1",
+    "duration": 12.381833,
+    "size_mb": 5.74,
+    "bit_rate": "3892126",
+    "nb_frames": "741"
+  },
+  {
+    "file": "assets/video_sources/hdf5_samples/hdf5_video/sam2_masked_video_1780656806372.mp4",
+    "width": 1280,
+    "height": 640,
+    "fps": "24/1",
+    "duration": 9.0,
+    "size_mb": 1.54,
+    "bit_rate": "1439580",
+    "nb_frames": "216"
+  },
+  {
+    "file": "assets/video_sources/raw/g1_top_camera_direct_chaji_step1_pot_r001_20260609_135508_trim.mp4",
+    "width": 1280,
+    "height": 800,
+    "fps": "30/1",
+    "duration": 7.633333,
+    "size_mb": 3.57,
+    "bit_rate": "3921251",
+    "nb_frames": "289"
+  },
+  {
+    "file": "assets/video_sources/raw/g1_top_camera_direct_scene02_realbot_correction_000_spacemouse_r001_20260605_150440.mp4",
+    "width": 1280,
+    "height": 800,
+    "fps": "30/1",
+    "duration": 9.666667,
+    "size_mb": 6.89,
+    "bit_rate": "5980765",
+    "nb_frames": "290"
+  },
+  {
+    "file": "assets/video_sources/raw/out_21x9.mp4",
+    "width": 1728,
+    "height": 740,
+    "fps": "30/1",
+    "duration": 8.15,
+    "size_mb": 2.69,
+    "bit_rate": "2769287",
+    "nb_frames": "244"
+  }
+]
