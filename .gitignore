@@ -2,3 +2,5 @@ assets/video_sources/raw/
 assets/video_sources/extracted/
 assets/video_sources/hdf5_samples/
 assets/video_sources/previews/
+assets/video_sources/.DS_Store
+assets/pdf_reference/

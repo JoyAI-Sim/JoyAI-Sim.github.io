@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="JoyAI-Sim project page: robot-simulation-human data interconversion, scalable evaluation, and data enrichment."
+      content="JoyAI-Sim technical report: simulation transformation toolchain for the embodied data pyramid."
     />
     <title>JoyAI-Sim</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -17,209 +17,143 @@
         <span>JoyAI-Sim</span>
       </a>
       <nav class="nav" aria-label="Page navigation">
-        <a href="#top">首页</a>
-        <a href="#framework">框架</a>
-        <a href="#evaluation">测评</a>
-        <a href="#enrichment">数据增值</a>
-        <a href="#materials">素材</a>
-        <a href="#access">体验</a>
+        <a href="#framework">Framework</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#enrichment">Enrichment</a>
+        <a href="#access">Trial</a>
       </nav>
       <div class="language">
-        <span>EN</span>
-        <strong>中文</strong>
+        <span>中文</span>
+        <strong>EN</strong>
       </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <p class="date">2026 年 04 月 16 日</p>
+        <p class="date">04/16/2026</p>
         <h1>JoyAI-Sim</h1>
         <p class="subtitle">
-          面向具身数据金字塔的仿真转换工具链，一站式实现具身数据的增值转换与泛化扩增。
+          Simulation transformation toolchain for embodied data pyramid, one-stop realization of value-added conversion
+          and generalization amplification of embodied data.
         </p>
-        <a class="primary-action" href="#access">试用 JoyBuilder</a>
+        <p class="report-label">Technical Repport</p>
         <figure class="hero-card">
-          <img src="./assets/media/slide3_overview.gif" alt="JoyAI-Sim robot simulation human synchronized overview" />
+          <img src="./assets/media/pdf-page/JoyAI-Sim-图.gif" alt="JoyAI-Sim overview animation" />
         </figure>
       </section>
 
       <section class="content-section" id="framework">
-        <h2>JoyAI-Sim 框架</h2>
+        <h2>JoyAI-Sim Framework</h2>
         <p>
-          技术报告 JoyAI-Sim 针对具身领域广泛存在的测评效率与数据瓶颈问题，结合数据金字塔提出 Robot ⇌ Simulation ⇌ Human 仿真数据转换工具链。它一端连接稀缺但贴近真实部署的机器人数据，另一端连接丰富但与本体无关的人类数据，最终实现数据与评测的双向贯通。
+          To address the widely recognized challenges of evaluation efficiency and data bottlenecks in embodied AI, we
+          propose the JoyAI-Sim simulation data transformation toolchain, Robot ⇌ Simulation ⇌ Human, built upon the
+          embodied data pyramid. This toolchain supports both a top-down Robot → Simulation → Human service for
+          efficient model evaluation and a bottom-up Human → Simulation → Robot service for data enrichment.
         </p>
         <p>
-          JoyAI-Sim 同时支持金字塔自顶向下的 Robot → Simulation → Human 高效模型测评服务，以及金字塔自底向上的 Human → Simulation → Robot 数据增值服务。通过京东云 JoyBuilder 平台，开发者可以获得一站式的具身仿真服务。
+          The two transformation pipelines connect, at one end, scarce robot data that closely reflects real-world
+          deployment, and at the other end, abundant human data that is not tied to a specific robot embodiment. Together,
+          they enable bidirectional integration of data and evaluation. Through the JD Cloud JoyBuilder platform,
+          JoyAI-Sim provides developers with a one-stop embodied simulation service.
         </p>
-        <div class="pipeline-tabs" aria-label="JoyAI-Sim pipeline modules">
-          <span>Digital Twin Replication</span>
-          <span>Naturalness Refinement</span>
-          <span>Cross-Embodiment Retargeting</span>
-          <span>Physical Consistency Guarantee</span>
-        </div>
-        <figure class="image-panel">
-          <img src="./assets/new/data_pyramid_alt.png" alt="JoyAI-Sim four-stage framework" loading="lazy" />
-          <figcaption>JoyAI-Sim 的四个核心环节：数字孪生复刻、自然度反馈、跨本体重定向与物理一致性保证。</figcaption>
-        </figure>
       </section>
 
       <section class="content-section" id="evaluation">
-        <h2>基于仿真工具链的高效模型测评</h2>
-        <p>
-          通过 Robot → Simulation → Human 的仿真工具链，JoyAI-Sim 可实现比真机测评更加高效的模型测评。系统以真实机器人任务定义部署目标，借助数字孪生完成可规模化的仿真评测与轨迹合成，并引入人类具身反馈检验仿真动作的自然度，构建贯通“真机测评—仿真测评—人类感知”的闭环评测链路。
-        </p>
-        <p>
-          Robot → Simulation 阶段以真实机器人任务为锚点，将任务语义、物体资产、场景布局、机器人本体、相机配置、控制接口和成功判据映射到数字孪生中，形成可复现、可并行、可诊断的仿真评测环境。JoyAI-Sim 综合运用 3D 重建技术构建面向家居场景的 Sim-Ready 资产库，覆盖 295 个细粒度类别、53,661 个资产实例，并支持在多个仿真器中对机器人状态、物体布局、实例变化、背景、语言和光照等维度进行所见即所得的调整。
-        </p>
+        <h2>Efficient model evaluation based on simulation tool chain</h2>
         <figure class="video-panel">
-          <video autoplay muted loop playsinline poster="./assets/media/slide2_preview.png">
-            <source src="./assets/media/slide2_overview.mp4" type="video/mp4" />
+          <video controls muted loop playsinline poster="./assets/media/slide2_preview.png">
+            <source src="./assets/media/pdf-page/Robot-Sim-Human.mp4" type="video/mp4" />
           </video>
-          <figcaption>Robot → Simulation → Human：从真机测评到仿真评测，再到人类具身感知反馈。</figcaption>
+          <figcaption>Robot-Sim-Human.mp4</figcaption>
         </figure>
-        <div class="video-grid two-up" aria-label="Robot simulation evaluation videos">
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/robot-sim-comparison.jpg">
-              <source src="./assets/media/joyai-sim-videos/robot-sim-comparison.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Robot / Sim 对齐</strong>
-              <span>同一任务在真机与仿真中并排回放，用于检查场景、相机与交互过程的一致性。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/real-robot-rollout.jpg">
-              <source src="./assets/media/joyai-sim-videos/real-robot-rollout.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>真实机器人任务</strong>
-              <span>以 G1 top-camera 任务轨迹作为部署锚点，向数字孪生映射任务语义与成功判据。</span>
-            </figcaption>
-          </figure>
-        </div>
         <p>
-          Simulation → Human 阶段在仿真中通过 FSM+IK、IKFlow 和强化学习生成或扩增机器人轨迹，并进一步引入人类具身反馈评估轨迹自然度。人类操作者通过模拟执行仿真轨迹，识别接近策略、阶段过渡和动作流畅性中的不合理模式，从而筛除虽然物理可行但不符合人类运动直觉的轨迹。
+          Through the Robot → Simulation → Human simulation toolchain, model evaluation can be conducted more efficiently
+          than on physical robots. Real robot tasks are used to define deployment-oriented goals, while digital twins
+          enable scalable simulation-based evaluation and trajectory synthesis. Human embodied feedback is further
+          introduced to assess the naturalness of simulated actions, thereby forming a closed-loop evaluation pipeline
+          that connects physical robot evaluation, simulation evaluation, and human perception.
         </p>
-        <figure class="image-panel">
-          <img src="./assets/new/r2s2h_toolchain.png" alt="Robot to Simulation to Human toolchain" loading="lazy" />
-          <figcaption>Robot → Simulation → Human：从真机任务到数字孪生，再到人类自然度反馈。</figcaption>
+
+        <h3>Robot → Simulation</h3>
+        <p>
+          Using real robot tasks as anchors, task semantics, object assets, scene layouts, robot embodiments, camera
+          configurations, control interfaces, and success criteria are mapped into digital twins to construct simulation
+          evaluation environments that are reproducible, parallelizable, and diagnosable. JoyAI-Sim builds a Sim-Ready
+          asset library for household scenarios by integrating 3D reconstruction techniques. The library covers 295
+          fine-grained categories and 53,661 asset instances, and supports adjustments across multiple simulators along
+          dimensions such as robot states, object layouts, instance variations, backgrounds, language instructions, and
+          lighting.
+        </p>
+
+        <h3>Simulation → Human</h3>
+        <figure class="video-panel">
+          <video controls muted loop playsinline poster="./assets/media/joyai-sim-videos/robot-sim-comparison.jpg">
+            <source src="./assets/media/pdf-page/concat.mp4" type="video/mp4" />
+          </video>
+          <figcaption>concat.mp4</figcaption>
         </figure>
-        <figure class="image-panel slim">
-          <img src="./assets/new/robot2sim_alignment.png" alt="Robot to simulation interaction alignment" loading="lazy" />
-          <figcaption>交互对齐让同一条控制命令可以在真机与仿真中复现，支持逐步比较与可诊断评估。</figcaption>
-        </figure>
+        <p>
+          In simulation, robot trajectories are generated or augmented using FSM+IK, IKFlow, and reinforcement learning,
+          with human embodied feedback further introduced to assess trajectory naturalness. Human operators simulate the
+          execution of these trajectories to identify unreasonable patterns in approach strategies, phase transitions,
+          and motion smoothness. This makes it possible to filter out trajectories that are physically feasible but
+          inconsistent with human motion intuition, thereby improving the quality of both simulation-based evaluation and
+          synthetic data.
+        </p>
       </section>
 
       <section class="content-section" id="enrichment">
-        <h2>基于仿真工具链的数据增值服务</h2>
+        <h2>Data Enrichment Service Based on the Simulation Toolchain</h2>
         <p>
-          通过 Human → Simulation → Robot 仿真工具链，JoyAI-Sim 以第一人称人类示范视频作为数据源，借助手部运动恢复、场景重建与数字孪生构建，将原本与机器人本体无关的人类行为转化为可在仿真中执行和验证的任务。
-        </p>
-        <p>
-          Human → Simulation 阶段从人类第一视角视频中提取手部轨迹、抓取/释放事件、物体交互关系与场景几何结构，并构建仿真可执行的数字孪生环境，使人类视频从单纯视觉记录转化为带有空间结构、交互关系和任务语义的仿真实例。
+          Through the Human → Simulation → Robot simulation toolchain, JoyAI-Sim provides a data enrichment service.
+          Using first-person human demonstration videos as the data source, the toolchain leverages hand motion recovery,
+          scene reconstruction, and digital twin construction to transform human behaviors that are originally
+          independent of any robot embodiment into tasks that can be executed and verified in simulation. It then
+          generates trajectories, states, and action data for robot learning through robot trajectory retargeting,
+          physical feasibility filtering, simulation randomization, and robot-view rendering. In this way, it builds a
+          value-added pipeline that connects human demonstration data, simulation data, and robot data.
         </p>
         <figure class="video-panel">
-          <video autoplay muted loop playsinline poster="./assets/media/slide3_preview.png">
-            <source src="./assets/media/slide3_overview.mp4" type="video/mp4" />
+          <video controls muted loop playsinline poster="./assets/media/slide3_preview.png">
+            <source src="./assets/media/pdf-page/Human-Sim-Robot.mp4" type="video/mp4" />
           </video>
-          <figcaption>Human → Simulation → Robot：从人类示范数据到仿真数据，再到机器人训练数据。</figcaption>
+          <figcaption>Human-Sim-Robot.mp4</figcaption>
         </figure>
-        <div class="process-videos" aria-label="Human simulation robot data enrichment videos">
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/human-demo.jpg">
-              <source src="./assets/media/joyai-sim-videos/human-demo.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Human Demonstration</strong>
-              <span>第一人称人类示范提供抓取阶段、交互区域与任务语义。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/masked-interaction.jpg">
-              <source src="./assets/media/joyai-sim-videos/masked-interaction.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Simulation Processing</strong>
-              <span>分割与多视角处理把视觉记录转化为可执行、可验证的仿真实例。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/multiview-alignment.jpg">
-              <source src="./assets/media/joyai-sim-videos/multiview-alignment.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Robot Observation</strong>
-              <span>多视角机器人观测用于形成可训练的轨迹、状态与动作数据。</span>
-            </figcaption>
-          </figure>
-        </div>
         <p>
-          Simulation → Robot 阶段在仿真环境中完成机器人本体适配与物理可行性验证，筛除关节越界、碰撞、不可达和接触不合理的动作；同时通过改变物体位置、容器布局、物体组合、颜色材质、光照和背景等因素，从同一条人类示范派生出多样化但仍物理可行的机器人轨迹与观测视频。
+          In the Human → Simulation stage, hand trajectories, grasp/release events, object interaction relationships, and
+          scene geometry are extracted from human egocentric videos. A simulation-executable digital twin environment is
+          then constructed, transforming human videos from purely visual records into simulation instances with spatial
+          structure, interaction relationships, and task semantics.
         </p>
-        <figure class="image-panel">
-          <img src="./assets/new/data_factory_plan.png" alt="Human to simulation to robot scalable data factory" loading="lazy" />
-          <figcaption>Human → Simulation → Robot 数据工厂：从人类示范到仿真重定向、视频渲染与真实感增强。</figcaption>
-        </figure>
-      </section>
-
-      <section class="content-section" id="materials">
-        <h2>视频素材补充</h2>
         <p>
-          新增素材覆盖真实机器人操作、平时遥操作记录、第一人称双目视频和人类示范样本，可用于展示 JoyAI-Sim 从任务定义、具身反馈到数据增值的不同证据层。
+          In the Simulation → Robot stage, robot embodiment adaptation and physical feasibility validation are performed
+          in the simulation environment. Actions involving joint-limit violations, collisions, unreachable poses, or
+          unreasonable contacts are filtered out. Meanwhile, by varying factors such as object positions, container
+          layouts, object combinations, colors and materials, lighting, and backgrounds, diverse yet physically feasible
+          robot trajectories and observation videos can be derived from the same human demonstration.
         </p>
-        <div class="material-videos" aria-label="Additional JoyAI-Sim video materials">
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/task-variation-pot.jpg">
-              <source src="./assets/media/joyai-sim-videos/task-variation-pot.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Task Variation</strong>
-              <span>不同物体与桌面布局下的 G1 操作样本，用于补充任务泛化与场景变化。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/vr-embodied-feedback.jpg">
-              <source src="./assets/media/joyai-sim-videos/vr-embodied-feedback.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Embodied Feedback</strong>
-              <span>VR / 第一人称操作记录用于呈现人类具身反馈与轨迹自然度判断。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/egocentric-stereo-demo.jpg">
-              <source src="./assets/media/joyai-sim-videos/egocentric-stereo-demo.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Egocentric Stereo</strong>
-              <span>双目第一人称视频保留手部、物体和场景关系，支撑 Human → Simulation 阶段。</span>
-            </figcaption>
-          </figure>
-          <figure class="video-card">
-            <video autoplay muted loop playsinline poster="./assets/media/joyai-sim-videos/web-human-demo.jpg">
-              <source src="./assets/media/joyai-sim-videos/web-human-demo.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <strong>Web-ready Demo</strong>
-              <span>压缩后的示范素材用于网页展示，保留动作阶段和交互语义。</span>
-            </figcaption>
-          </figure>
-        </div>
+        <p>
+          Ultimately, large-scale, low-cost human behavior data is transformed into high-value training resources that
+          are verifiable, extensible, and usable for robot learning.
+        </p>
       </section>
 
       <section class="content-section" id="access">
-        <h2>试用与体验入口</h2>
+        <h2>Trial and Access</h2>
         <p>
-          欢迎通过京东云 JoyBuilder 平台体验 JoyAI-Sim 具身仿真服务。平台提供仿真服务创建、管理、查看、连接、云端资产挂载、数据增强实践案例与数据交易入口，帮助开发者将仿真评测和数据增值流程接入真实研发工作。
+          You are welcome to experience the JoyAI-Sim embodied simulation service through the JD Cloud JoyBuilder
+          platform:
         </p>
         <div class="link-grid">
-          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">创建仿真服务</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/manage-embodiedsimulation">管理仿真服务</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/check-embodiedsimulation">查看仿真服务</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/embodiedsimulation-isaacsimclient">连接仿真服务</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/mountedasset">挂载云端仿真资产</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/Notebook-Cosmos-Transfer">具身仿真数据增强实践案例</a>
-          <a href="https://robotdata.jdcloud.com/model-dev">数据交易平台</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">Create a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/manage-embodiedsimulation">Manage a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/check-embodiedsimulation">View a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/embodiedsimulation-isaacsimclient">Connect to a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/mountedasset">Mount cloud-based simulation assets</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/Notebook-Cosmos-Transfer">
+            Embodied simulation data augmentation practice case
+          </a>
+          <a href="https://robotdata.jdcloud.com/model-dev">Data trading platform</a>
         </div>
       </section>
     </main>
@@ -231,21 +165,21 @@
       </div>
       <div class="footer-columns">
         <div>
-          <strong>模型成果</strong>
-          <a href="#top">JoyAI-Sim</a>
-          <a href="#framework">Framework</a>
-          <a href="#evaluation">Evaluation</a>
+          <strong>Technical Repport</strong>
+          <a href="#framework">JoyAI-Sim Framework</a>
+          <a href="#evaluation">Efficient model evaluation</a>
+          <a href="#enrichment">Data enrichment service</a>
         </div>
         <div>
-          <strong>研究团队</strong>
-          <a href="#enrichment">Human-Sim-Robot</a>
-          <a href="#access">JoyBuilder</a>
+          <strong>Toolchain</strong>
+          <a href="#evaluation">Robot-Simulation-Human</a>
+          <a href="#enrichment">Human-Simulation-Robot</a>
           <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">GitHub</a>
         </div>
         <div>
-          <strong>了解更多</strong>
-          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">创建仿真服务</a>
-          <a href="https://robotdata.jdcloud.com/model-dev">数据交易平台</a>
+          <strong>Trial</strong>
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">Create simulation service</a>
+          <a href="https://robotdata.jdcloud.com/model-dev">Data trading platform</a>
         </div>
       </div>
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>

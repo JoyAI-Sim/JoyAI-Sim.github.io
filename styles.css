@@ -137,7 +137,8 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   letter-spacing: 0;
 }
@@ -154,6 +155,13 @@ h1 {
   color: #808795;
   font-size: 15px;
   line-height: 1.8;
+}
+
+.report-label {
+  margin: 18px auto 0;
+  color: #252832;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .primary-action {
@@ -187,6 +195,13 @@ h1 {
   color: #30323a;
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.18;
+}
+
+.content-section h3 {
+  margin-top: 36px;
+  color: #30323a;
+  font-size: 21px;
+  line-height: 1.28;
 }
 
 .content-section p {
