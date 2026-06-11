@@ -176,6 +176,28 @@
           <a href="https://robotdata.jdcloud.com/model-dev">Data trading platform</a>
         </div>
       </section>
+
+      <section class="content-section credits-section" id="authors">
+        <h2>Authors</h2>
+        <div class="author-box">
+          <p>Author list, affiliations, and contribution notes will be added here.</p>
+        </div>
+
+        <h2>Citation</h2>
+        <p>
+          Please use the following BibTeX entry as a placeholder citation until the final technical report metadata is
+          released.
+        </p>
+        <div class="bibtex-card">
+          <button class="copy-button" type="button" data-copy-target="main-bibtex">Copy</button>
+          <pre id="main-bibtex"><code>@techreport{joyaisim2026,
+  title       = {JoyAI-Sim: Simulation Transformation Toolchain for Embodied Data Pyramid},
+  author      = {JoyAI-Sim Team},
+  institution = {Joy Future Academy, JD},
+  year        = {2026}
+}</code></pre>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -204,5 +226,22 @@
       </div>
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
     </footer>
+    <script>
+      document.querySelectorAll("[data-copy-target]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const target = document.getElementById(button.dataset.copyTarget);
+          if (!target) return;
+          try {
+            await navigator.clipboard.writeText(target.innerText);
+            button.textContent = "Copied";
+          } catch {
+            button.textContent = "Copy failed";
+          }
+          window.setTimeout(() => {
+            button.textContent = "Copy";
+          }, 1600);
+        });
+      });
+    </script>
   </body>
 </html>
