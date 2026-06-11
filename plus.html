@@ -185,7 +185,7 @@
               awkward under embodied human judgment.
             </p>
           </div>
-          <div class="feedback-wall" aria-label="Synchronized VR human embodied feedback videos">
+          <div class="feedback-grid" aria-label="Synchronized VR human embodied feedback videos">
             <article class="feedback-tile">
               <strong>Approach Check</strong>
               <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-approach.jpg">
@@ -312,8 +312,8 @@
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
     </footer>
     <script>
-      const feedbackVideos = Array.from(document.querySelectorAll(".feedback-wall video"));
-      const syncFeedbackWall = () => {
+      const feedbackVideos = Array.from(document.querySelectorAll(".feedback-grid video"));
+      const syncFeedbackGrid = () => {
         if (!feedbackVideos.length) return;
         feedbackVideos.forEach((video) => {
           video.muted = true;
@@ -323,9 +323,9 @@
         });
       };
 
-      window.addEventListener("load", syncFeedbackWall);
+      window.addEventListener("load", syncFeedbackGrid);
       feedbackVideos.forEach((video) => {
-        video.addEventListener("loadedmetadata", syncFeedbackWall, { once: true });
+        video.addEventListener("loadedmetadata", syncFeedbackGrid, { once: true });
       });
     </script>
   </body>
