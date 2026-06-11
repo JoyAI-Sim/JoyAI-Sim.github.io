@@ -153,15 +153,15 @@ h1 {
 .subtitle {
   max-width: 620px;
   margin: 18px auto 22px;
-  color: #808795;
-  font-size: 15px;
+  color: #4f5665;
+  font-size: 16px;
   line-height: 1.8;
 }
 
 .report-label {
-  margin: 18px auto 0;
+  margin: 20px auto 0;
   color: #252832;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 700;
 }
 
