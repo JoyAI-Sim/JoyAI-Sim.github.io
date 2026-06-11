@@ -311,6 +311,38 @@ h1 {
   padding: 6px 10px;
 }
 
+.texture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.texture-tile {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e6ebf3;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+}
+
+.texture-tile img {
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: #eef2f7;
+  object-fit: cover;
+}
+
+.texture-tile span {
+  color: #30323a;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .feedback-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -621,6 +653,7 @@ h1 {
   .process-videos,
   .material-videos,
   .feedback-grid,
+  .texture-grid,
   .link-grid,
   .site-footer,
   .footer-columns {
