@@ -52,7 +52,10 @@
         </p>
         <p class="report-label">Technical Report</p>
         <figure class="hero-card">
-          <img src="./assets/media/pdf-page/nvwa_web.jpg" alt="JoyAI-Sim embodied data pyramid framework" />
+          <img
+            src="./assets/media/pdf-page/joysim-overview.png"
+            alt="JoyAI-Sim overview with robot, simulation, and human pathways"
+          />
         </figure>
       </section>
 
@@ -71,7 +74,11 @@
           JoyAI-Sim provides developers with a one-stop embodied simulation service.
         </p>
         <figure class="image-panel">
-          <img src="./assets/media/pdf-page/JoyAI-Sim-图.gif" alt="JoyAI-Sim overview animation" loading="lazy" />
+          <img
+            src="./assets/media/pdf-page/JoyAI-Sim-图.gif"
+            alt="JoyAI-Sim overview animation"
+            loading="lazy"
+          />
         </figure>
       </section>
 
@@ -107,6 +114,44 @@
             loading="lazy"
           />
         </figure>
+        <p>
+          The simulation environments are further grounded through scene-specific asset construction and alignment.
+          JoyAI-Sim reconstructs study-room and living-room household settings as digital twins, so that real-robot
+          evaluation targets, object arrangements, and deployment constraints can be faithfully replayed in simulation.
+        </p>
+        <div class="figure-grid alignment-scenes" aria-label="Scene-specific digital twin construction examples">
+          <figure class="image-panel">
+            <img
+              src="./assets/media/pdf-page/StudyRoom_2.png"
+              alt="Study-room asset construction for robot-to-simulation scene alignment"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="image-panel">
+            <img
+              src="./assets/media/pdf-page/LivingRoom_2.png"
+              alt="Living-room asset construction for robot-to-simulation scene alignment"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-copy">
+            <h4>Robot-to-Sim Alignment Example</h4>
+            <p>
+              This paired rollout uses a real robot task as the anchor and shows the corresponding digital twin
+              alignment. The side-by-side view makes the evaluation setting reproducible and easier to diagnose across
+              object layout, camera viewpoint, and robot embodiment.
+            </p>
+          </div>
+          <figure class="video-panel detail-media">
+            <video controls muted loop playsinline poster="./assets/media/plus/robot-to-sim-alignment.jpg">
+              <source src="./assets/media/plus/robot-to-sim-alignment.mp4" type="video/mp4" />
+            </video>
+          </figure>
+        </div>
+
         <h3>Simulation → Human</h3>
         <figure class="video-panel">
           <video controls muted loop playsinline poster="./assets/media/pdf-page/concat.jpg">
@@ -121,6 +166,55 @@
           inconsistent with human motion intuition, thereby improving the quality of both simulation-based evaluation and
           synthetic data.
         </p>
+        <figure class="image-panel slim">
+          <img
+            src="./assets/media/pdf-page/s2h_flow.png"
+            alt="Simulation to human flowchart for trajectory naturalness refinement"
+            loading="lazy"
+          />
+        </figure>
+        <p>
+          This flow illustrates how simulated robot trajectories are projected into human-hand space for first-person
+          replay and inspection. Human embodied feedback then becomes a practical filter for rejecting awkward yet
+          executable trajectories before they are reused for evaluation or training.
+        </p>
+
+        <div class="detail-section">
+          <div class="detail-copy">
+            <h4>Human Embodied Feedback</h4>
+            <p>
+              Synchronized VR recordings expose the human-in-the-loop stage directly: operators inspect approach
+              strategies, contact timing, and motion smoothness, then filter behaviors that are physically feasible but
+              awkward under embodied human judgment.
+            </p>
+          </div>
+          <div class="feedback-grid" aria-label="Synchronized VR human embodied feedback videos">
+            <article class="feedback-tile">
+              <strong>Approach Check</strong>
+              <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-approach.jpg">
+                <source src="./assets/media/plus/vr-feedback-approach.mp4" type="video/mp4" />
+              </video>
+            </article>
+            <article class="feedback-tile">
+              <strong>Phase Transition</strong>
+              <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-transition.jpg">
+                <source src="./assets/media/plus/vr-feedback-transition.mp4" type="video/mp4" />
+              </video>
+            </article>
+            <article class="feedback-tile">
+              <strong>Contact Plausibility</strong>
+              <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-contact.jpg">
+                <source src="./assets/media/plus/vr-feedback-contact.mp4" type="video/mp4" />
+              </video>
+            </article>
+            <article class="feedback-tile">
+              <strong>Motion Smoothness</strong>
+              <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-smoothness.jpg">
+                <source src="./assets/media/plus/vr-feedback-smoothness.mp4" type="video/mp4" />
+              </video>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="content-section" id="enrichment">
@@ -156,6 +250,75 @@
           Ultimately, large-scale, low-cost human behavior data is transformed into high-value training resources that
           are verifiable, extensible, and usable for robot learning.
         </p>
+
+        <div class="detail-section generalization-section">
+          <div class="detail-copy">
+            <h4>Simulation Generalization Examples</h4>
+            <p>
+              Before robot-view observations are exported, the simulator can vary visual conditions while preserving the
+              task structure. Lighting and material randomization provide controlled diversity for downstream robot
+              learning without changing the underlying trajectory.
+            </p>
+          </div>
+          <div class="generalization-block">
+            <h5>Lighting Generalization</h5>
+            <figure class="video-panel detail-media lighting-panel">
+              <video controls muted loop playsinline poster="./assets/media/plus/episode-1000-lighting-generalization.jpg">
+                <source src="./assets/media/plus/episode-1000-lighting-generalization.mp4" type="video/mp4" />
+              </video>
+              <div class="lighting-labels" aria-hidden="true">
+                <span>Normal</span>
+                <span>Bright</span>
+                <span>Low light</span>
+              </div>
+            </figure>
+          </div>
+          <div class="generalization-block">
+            <h5>Texture Generalization</h5>
+            <div class="texture-grid" aria-label="Texture generalization examples">
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk000.jpg" alt="Wall 000 and desk 000 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk001.jpg" alt="Wall 000 and desk 001 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk015.jpg" alt="Wall 000 and desk 015 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk016.jpg" alt="Wall 000 and desk 016 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk018.jpg" alt="Wall 000 and desk 018 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk000.jpg" alt="Wall 008 and desk 000 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk001.jpg" alt="Wall 008 and desk 001 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk018.jpg" alt="Wall 008 and desk 018 material variant" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-copy">
+            <h4>Simulation-to-Robot Output</h4>
+            <p>
+              The resulting output is not just a visualization artifact: it is a robot-centered, multi-view observation
+              stream prepared for downstream robot learning. This sample shows the training-ready visual output after
+              simulation retargeting and robot-view rendering.
+            </p>
+          </div>
+          <figure class="video-panel detail-media wide-output">
+            <video controls muted loop playsinline poster="./assets/media/plus/sim-to-robot-output.jpg">
+              <source src="./assets/media/plus/sim-to-robot-output.mp4" type="video/mp4" />
+            </video>
+          </figure>
+        </div>
       </section>
 
       <section class="content-section" id="access">
@@ -189,8 +352,8 @@
           released.
         </p>
         <div class="bibtex-card">
-          <button class="copy-button" type="button" data-copy-target="main-bibtex">Copy</button>
-          <pre id="main-bibtex"><code>@techreport{joyaisim2026,
+          <button class="copy-button" type="button" data-copy-target="plus-bibtex">Copy</button>
+          <pre id="plus-bibtex"><code>@techreport{joyaisim2026,
   title       = {JoyAI-Sim: A Simulation-Enabled Interconversion Toolchain for the Embodied Data Pyramid},
   author      = {JoyAI-Sim Team},
   institution = {Joy Future Academy, JD},
@@ -227,6 +390,22 @@
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
     </footer>
     <script>
+      const feedbackVideos = Array.from(document.querySelectorAll(".feedback-grid video"));
+      const syncFeedbackGrid = () => {
+        if (!feedbackVideos.length) return;
+        feedbackVideos.forEach((video) => {
+          video.muted = true;
+          if (video.readyState >= 1) video.currentTime = Math.min(1.4, Math.max(0, video.duration - 0.2));
+          const playPromise = video.play();
+          if (playPromise) playPromise.catch(() => {});
+        });
+      };
+
+      window.addEventListener("load", syncFeedbackGrid);
+      feedbackVideos.forEach((video) => {
+        video.addEventListener("loadedmetadata", syncFeedbackGrid, { once: true });
+      });
+
       document.querySelectorAll("[data-copy-target]").forEach((button) => {
         button.addEventListener("click", async () => {
           const target = document.getElementById(button.dataset.copyTarget);
