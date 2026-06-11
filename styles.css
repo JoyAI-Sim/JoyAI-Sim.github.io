@@ -257,12 +257,6 @@ h1 {
   margin: 40px 0 0;
 }
 
-.wide-detail {
-  width: min(var(--wide), calc(100vw - 40px));
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
 .detail-copy h3 {
   margin-top: 0;
 }
@@ -518,12 +512,6 @@ h1 {
   .site-footer,
   .footer-columns {
     grid-template-columns: 1fr;
-  }
-
-  .wide-detail {
-    width: 100%;
-    margin-left: 0;
-    transform: none;
   }
 
   .wide-output video {
