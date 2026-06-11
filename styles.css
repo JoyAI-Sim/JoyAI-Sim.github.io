@@ -386,6 +386,14 @@ h1 {
   align-items: start;
 }
 
+.alignment-scenes {
+  margin: 28px 0 0;
+}
+
+.alignment-scenes .image-panel {
+  margin: 0;
+}
+
 .bullet-list {
   margin: 28px 0 0;
   padding-left: 20px;

@@ -71,7 +71,11 @@
           JoyAI-Sim provides developers with a one-stop embodied simulation service.
         </p>
         <figure class="image-panel">
-          <img src="./assets/media/pdf-page/nvwa_web.jpg" alt="JoyAI-Sim embodied data pyramid framework" loading="lazy" />
+          <img
+            src="./assets/media/pdf-page/joysim-overview.png"
+            alt="JoyAI-Sim overview with robot, simulation, and human pathways"
+            loading="lazy"
+          />
         </figure>
       </section>
 
@@ -107,6 +111,27 @@
             loading="lazy"
           />
         </figure>
+        <p>
+          The simulation environments are further grounded through scene-specific asset construction and alignment.
+          JoyAI-Sim reconstructs study-room and living-room household settings as digital twins, so that real-robot
+          evaluation targets, object arrangements, and deployment constraints can be faithfully replayed in simulation.
+        </p>
+        <div class="figure-grid alignment-scenes" aria-label="Scene-specific digital twin construction examples">
+          <figure class="image-panel">
+            <img
+              src="./assets/media/pdf-page/StudyRoom_2.png"
+              alt="Study-room asset construction for robot-to-simulation scene alignment"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="image-panel">
+            <img
+              src="./assets/media/pdf-page/LivingRoom_2.png"
+              alt="Living-room asset construction for robot-to-simulation scene alignment"
+              loading="lazy"
+            />
+          </figure>
+        </div>
 
         <div class="detail-section">
           <div class="detail-copy">
@@ -137,6 +162,18 @@
           and motion smoothness. This makes it possible to filter out trajectories that are physically feasible but
           inconsistent with human motion intuition, thereby improving the quality of both simulation-based evaluation and
           synthetic data.
+        </p>
+        <figure class="image-panel slim">
+          <img
+            src="./assets/media/pdf-page/s2h_flow.png"
+            alt="Simulation to human flowchart for trajectory naturalness refinement"
+            loading="lazy"
+          />
+        </figure>
+        <p>
+          This flow illustrates how simulated robot trajectories are projected into human-hand space for first-person
+          replay and inspection. Human embodied feedback then becomes a practical filter for rejecting awkward yet
+          executable trajectories before they are reused for evaluation or training.
         </p>
 
         <div class="detail-section">
