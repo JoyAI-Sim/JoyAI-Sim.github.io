@@ -409,27 +409,6 @@ h1 {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
-  margin: 28px 0 0;
-}
-
-.figure-card {
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid #e6ebf3;
-  border-radius: 8px;
-  background: #fbfcfe;
-}
-
-.figure-card img {
-  background: #f3f6fa;
-}
-
-.figure-card figcaption {
-  margin: 0;
-  padding: 12px 14px 14px;
-  color: #697180;
-  font-size: 12px;
-  line-height: 1.55;
 }
 
 .bullet-list {
