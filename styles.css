@@ -311,11 +311,27 @@ h1 {
   padding: 6px 10px;
 }
 
+.generalization-block {
+  margin-top: 24px;
+}
+
+.generalization-block h5 {
+  margin: 0;
+  color: #30323a;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.generalization-block .detail-media {
+  margin-top: 12px;
+}
+
 .texture-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 12px;
 }
 
 .texture-tile {

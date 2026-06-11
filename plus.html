@@ -138,64 +138,6 @@
 
         <div class="detail-section">
           <div class="detail-copy">
-            <h4>Lighting Generalization Example</h4>
-            <p>
-              The same robot-centered three-view rollout is rendered under normal, bright, and low-light settings,
-              showing controllable visual-domain variation while preserving the task trajectory and observation
-              structure.
-            </p>
-          </div>
-          <figure class="video-panel detail-media lighting-panel">
-            <video controls muted loop playsinline poster="./assets/media/plus/episode-1000-lighting-generalization.jpg">
-              <source src="./assets/media/plus/episode-1000-lighting-generalization.mp4" type="video/mp4" />
-            </video>
-            <div class="lighting-labels" aria-hidden="true">
-              <span>Normal</span>
-              <span>Bright</span>
-              <span>Low light</span>
-            </div>
-          </figure>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-copy">
-            <h4>Texture Generalization Example</h4>
-            <p>
-              Wall and tabletop materials can also be varied while keeping the scene layout, task objects, and camera
-              configuration fixed. This provides controlled visual diversity for simulation evaluation and data
-              augmentation without changing the underlying robot task.
-            </p>
-          </div>
-          <div class="texture-grid" aria-label="Texture generalization examples">
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall000-desk000.jpg" alt="Wall 000 and desk 000 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall000-desk001.jpg" alt="Wall 000 and desk 001 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall000-desk015.jpg" alt="Wall 000 and desk 015 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall000-desk016.jpg" alt="Wall 000 and desk 016 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall000-desk018.jpg" alt="Wall 000 and desk 018 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall008-desk000.jpg" alt="Wall 008 and desk 000 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall008-desk001.jpg" alt="Wall 008 and desk 001 material variant" loading="lazy" />
-            </figure>
-            <figure class="texture-tile">
-              <img src="./assets/media/plus/combo-wall008-desk018.jpg" alt="Wall 008 and desk 018 material variant" loading="lazy" />
-            </figure>
-          </div>
-        </div>
-
-        <div class="detail-section">
-          <div class="detail-copy">
             <h4>Robot-to-Sim Alignment Example</h4>
             <p>
               This paired rollout uses a real robot task as the anchor and shows the corresponding digital twin
@@ -308,6 +250,59 @@
           Ultimately, large-scale, low-cost human behavior data is transformed into high-value training resources that
           are verifiable, extensible, and usable for robot learning.
         </p>
+
+        <div class="detail-section generalization-section">
+          <div class="detail-copy">
+            <h4>Simulation Generalization Examples</h4>
+            <p>
+              Before robot-view observations are exported, the simulator can vary visual conditions while preserving the
+              task structure. Lighting and material randomization provide controlled diversity for downstream robot
+              learning without changing the underlying trajectory.
+            </p>
+          </div>
+          <div class="generalization-block">
+            <h5>Lighting Generalization</h5>
+            <figure class="video-panel detail-media lighting-panel">
+              <video controls muted loop playsinline poster="./assets/media/plus/episode-1000-lighting-generalization.jpg">
+                <source src="./assets/media/plus/episode-1000-lighting-generalization.mp4" type="video/mp4" />
+              </video>
+              <div class="lighting-labels" aria-hidden="true">
+                <span>Normal</span>
+                <span>Bright</span>
+                <span>Low light</span>
+              </div>
+            </figure>
+          </div>
+          <div class="generalization-block">
+            <h5>Texture Generalization</h5>
+            <div class="texture-grid" aria-label="Texture generalization examples">
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk000.jpg" alt="Wall 000 and desk 000 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk001.jpg" alt="Wall 000 and desk 001 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk015.jpg" alt="Wall 000 and desk 015 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk016.jpg" alt="Wall 000 and desk 016 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall000-desk018.jpg" alt="Wall 000 and desk 018 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk000.jpg" alt="Wall 008 and desk 000 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk001.jpg" alt="Wall 008 and desk 001 material variant" loading="lazy" />
+              </figure>
+              <figure class="texture-tile">
+                <img src="./assets/media/plus/combo-wall008-desk018.jpg" alt="Wall 008 and desk 018 material variant" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
 
         <div class="detail-section">
           <div class="detail-copy">
