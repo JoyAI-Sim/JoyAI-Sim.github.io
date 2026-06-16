@@ -1,10 +1,11 @@
 :root {
   --text: #17181d;
-  --muted: #6d7280;
-  --soft: #eef1f6;
-  --line: #e5e9f1;
-  --aqua: #43dad5;
-  --blue: #2d6cff;
+  --muted: #4e5563;
+  --soft: #fff5f4;
+  --line: #f1d7d3;
+  --accent: #e1251b;
+  --accent-deep: #c81623;
+  --accent-soft: #fff1ef;
   --content: 760px;
   --wide: 900px;
   font-family: Inter, "PingFang SC", "PingFang TC", "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
@@ -21,7 +22,9 @@ html {
 
 body {
   margin: 0;
-  background: #fff;
+  background:
+    linear-gradient(180deg, rgba(225, 37, 27, 0.04) 0, rgba(225, 37, 27, 0.015) 160px, #fff 300px),
+    #fff;
   color: var(--text);
   font-size: 16px;
   line-height: 1.78;
@@ -57,6 +60,8 @@ video {
   padding: 0 56px;
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(225, 37, 27, 0.1);
+  box-shadow: 0 8px 28px rgba(23, 24, 29, 0.04);
 }
 
 .brand,
@@ -77,8 +82,8 @@ video {
   width: 22px;
   height: 22px;
   background:
-    linear-gradient(90deg, #0d0f14 3px, transparent 3px 7px, #0d0f14 7px 10px, transparent 10px),
-    linear-gradient(#0d0f14 0 0) 14px 4px / 3px 14px no-repeat;
+    linear-gradient(90deg, var(--accent) 3px, transparent 3px 7px, #0d0f14 7px 10px, transparent 10px),
+    linear-gradient(var(--accent) 0 0) 14px 4px / 3px 14px no-repeat;
   border-radius: 2px;
 }
 
@@ -95,7 +100,7 @@ video {
 }
 
 .nav a:hover {
-  color: #0f1117;
+  color: var(--accent);
 }
 
 .language {
@@ -119,17 +124,18 @@ video {
 }
 
 .lang-button:hover {
-  color: #4f5563;
+  color: var(--accent);
 }
 
 .lang-button.is-active {
   border-radius: 999px;
-  background: #f0f2f6;
-  color: #22252c;
+  background: var(--accent);
+  color: #fff;
   min-width: 56px;
   min-height: 56px;
   padding: 0 18px;
   font-weight: 600;
+  box-shadow: 0 10px 24px rgba(225, 37, 27, 0.22);
 }
 
 main {
@@ -156,7 +162,7 @@ h4 {
 }
 
 h1 {
-  color: #282a32;
+  color: var(--accent);
   font-size: clamp(42px, 5.4vw, 64px);
   line-height: 1.05;
 }
@@ -164,14 +170,14 @@ h1 {
 .subtitle {
   max-width: 620px;
   margin: 18px auto 22px;
-  color: #4f5665;
+  color: #2b2f38;
   font-size: 16px;
   line-height: 1.8;
 }
 
 .report-label {
   margin: 20px auto 0;
-  color: #252832;
+  color: var(--accent-deep);
   font-size: 19px;
   font-weight: 700;
 }
@@ -182,12 +188,12 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: #3763ff;
+  background: var(--accent);
   color: #fff;
   padding: 8px 18px;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0 10px 24px rgba(55, 99, 255, 0.24);
+  box-shadow: 0 10px 24px rgba(225, 37, 27, 0.24);
 }
 
 .hero-card {
@@ -195,8 +201,9 @@ h1 {
   margin: 42px auto 0;
   overflow: hidden;
   border-radius: 14px;
-  background: #edf2f7;
-  box-shadow: 0 14px 50px rgba(27, 36, 58, 0.12);
+  background: #fff;
+  border: 1px solid rgba(225, 37, 27, 0.14);
+  box-shadow: 0 18px 54px rgba(23, 24, 29, 0.08);
 }
 
 .content-section {
@@ -204,27 +211,27 @@ h1 {
 }
 
 .content-section h2 {
-  color: #30323a;
+  color: #1f2229;
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.18;
 }
 
 .content-section h3 {
   margin-top: 42px;
-  color: #30323a;
+  color: #22252c;
   font-size: 25px;
   line-height: 1.28;
 }
 
 .content-section h4 {
-  color: #30323a;
+  color: var(--accent-deep);
   font-size: 19px;
   line-height: 1.32;
 }
 
 .content-section p {
   margin: 22px 0 0;
-  color: #4c5362;
+  color: #232831;
   font-size: 16px;
   line-height: 1.82;
 }
@@ -240,9 +247,10 @@ h1 {
   display: grid;
   min-height: 50px;
   place-items: center;
-  border: 1.5px solid #49d9d4;
+  border: 1.5px solid rgba(225, 37, 27, 0.28);
   border-radius: 7px;
   color: #222a36;
+  background: #fff;
   padding: 8px 10px;
   font-size: 12px;
   font-weight: 700;
@@ -254,22 +262,26 @@ h1 {
   margin: 32px 0 0;
   overflow: hidden;
   border-radius: 8px;
-  background: #f7f9fb;
+  background: #fff;
+  border: 1px solid rgba(225, 37, 27, 0.12);
+  box-shadow: 0 12px 30px rgba(23, 24, 29, 0.05);
 }
 
 .video-panel {
   margin: 32px 0 0;
   overflow: hidden;
   border-radius: 8px;
-  background: #f7f9fb;
+  background: #fff;
+  border: 1px solid rgba(225, 37, 27, 0.12);
+  box-shadow: 0 12px 30px rgba(23, 24, 29, 0.05);
 }
 
 .image-panel img {
-  background: #f7f9fb;
+  background: #fffaf9;
 }
 
 .video-panel video {
-  background: #f7f9fb;
+  background: #fffaf9;
 }
 
 .detail-section {
@@ -312,9 +324,10 @@ h1 {
 .lighting-labels span {
   align-self: start;
   margin-top: 12px;
+  border: 1px solid rgba(225, 37, 27, 0.14);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 4px 16px rgba(27, 36, 58, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 18px rgba(225, 37, 27, 0.1);
   color: #252832;
   font-size: 12px;
   font-weight: 700;
@@ -328,7 +341,7 @@ h1 {
 
 .generalization-block h5 {
   margin: 0;
-  color: #30323a;
+  color: #20242b;
   font-size: 15px;
   font-weight: 700;
   line-height: 1.35;
@@ -348,7 +361,7 @@ h1 {
 .texture-tile {
   margin: 0;
   overflow: hidden;
-  border: 1px solid #e6ebf3;
+  border: 1px solid rgba(225, 37, 27, 0.14);
   border-radius: 8px;
   background: #fff;
   padding: 6px;
@@ -357,7 +370,7 @@ h1 {
 .texture-tile img {
   aspect-ratio: 16 / 9;
   border-radius: 6px;
-  background: #eef2f7;
+  background: #fff7f6;
   object-fit: cover;
 }
 
@@ -373,14 +386,15 @@ h1 {
   gap: 10px;
   margin: 0;
   overflow: hidden;
-  border: 1px solid #e6ebf3;
+  border: 1px solid rgba(225, 37, 27, 0.15);
   border-radius: 8px;
   background: #fff;
   padding: 12px;
+  box-shadow: 0 10px 26px rgba(23, 24, 29, 0.04);
 }
 
 .feedback-tile strong {
-  color: #30323a;
+  color: #21242c;
   font-size: 12px;
   line-height: 1.25;
 }
@@ -388,7 +402,7 @@ h1 {
 .feedback-tile video {
   aspect-ratio: 16 / 9;
   border-radius: 6px;
-  background: #eef2f7;
+  background: #fff7f6;
   object-fit: cover;
 }
 
@@ -425,16 +439,16 @@ h1 {
   display: grid;
   overflow: hidden;
   margin: 0;
-  border: 1px solid #e6ebf3;
+  border: 1px solid rgba(225, 37, 27, 0.14);
   border-radius: 8px;
-  background: #fbfcfe;
+  background: #fff;
 }
 
 .video-card video {
   aspect-ratio: 16 / 10;
   width: 100%;
   height: 100%;
-  background: #f1f4f8;
+  background: #fff7f6;
   object-fit: cover;
 }
 
@@ -461,7 +475,7 @@ h1 {
 }
 
 .video-card span {
-  color: #697180;
+  color: #5d6573;
   font-size: 12px;
   line-height: 1.55;
 }
@@ -484,7 +498,7 @@ h1 {
 .bullet-list {
   margin: 28px 0 0;
   padding-left: 20px;
-  color: #4c5362;
+  color: #232831;
   font-size: 15px;
 }
 
@@ -504,9 +518,10 @@ h1 {
   min-height: 48px;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #49d9d4;
+  border: 1.5px solid rgba(225, 37, 27, 0.26);
   border-radius: 7px;
-  color: #222a36;
+  color: #1d2128;
+  background: #fff;
   padding: 9px 12px;
   font-size: 13px;
   font-weight: 700;
@@ -519,9 +534,9 @@ h1 {
 }
 
 .link-grid a:hover {
-  border-color: #3763ff;
-  background: #f4f7ff;
-  color: #214bcb;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
 }
 
 .credits-section {
@@ -542,9 +557,10 @@ h1 {
 
 .author-box,
 .bibtex-card {
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgba(225, 37, 27, 0.14);
   border-radius: 8px;
-  background: #fbfcfe;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(23, 24, 29, 0.04);
 }
 
 .author-box {
@@ -553,7 +569,7 @@ h1 {
 
 .author-box p {
   margin: 0;
-  color: #6a7280;
+  color: #2b313b;
 }
 
 .bibtex-card {
@@ -566,7 +582,7 @@ h1 {
   margin: 0;
   overflow-x: auto;
   padding: 28px 30px;
-  color: #303644;
+  color: #222832;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 13px;
   line-height: 1.65;
@@ -580,7 +596,7 @@ h1 {
   min-width: 68px;
   border: 0;
   border-radius: 999px;
-  background: #252832;
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
   padding: 8px 14px;
@@ -589,15 +605,16 @@ h1 {
 }
 
 .copy-button:hover {
-  background: #3763ff;
+  background: var(--accent-deep);
 }
 
 .site-footer {
   margin-top: 120px;
   padding: 78px 56px 26px;
   background:
-    radial-gradient(circle at 50% 0%, rgba(68, 222, 214, 0.35), transparent 46%),
-    linear-gradient(180deg, #ffffff 0%, #e9fbf8 50%, #6fe9d6 100%);
+    radial-gradient(circle at 50% 0%, rgba(225, 37, 27, 0.12), transparent 44%),
+    linear-gradient(180deg, #fff7f6 0%, #ffeae7 48%, #ffd9d4 100%);
+  border-top: 1px solid rgba(225, 37, 27, 0.12);
 }
 
 .site-footer {
@@ -620,19 +637,23 @@ h1 {
 
 .footer-columns strong {
   margin-bottom: 8px;
-  color: #20232b;
+  color: #1f232b;
   font-size: 14px;
 }
 
 .footer-columns a {
-  color: #6a7280;
+  color: #4e5563;
   font-size: 13px;
+}
+
+.footer-columns a:hover {
+  color: var(--accent-deep);
 }
 
 .copyright {
   grid-column: 1 / -1;
   margin: 46px 0 0;
-  color: #4d6261;
+  color: #6c4a45;
   font-size: 12px;
 }
 
