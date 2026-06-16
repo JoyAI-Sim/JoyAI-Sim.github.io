@@ -211,20 +211,20 @@ h1 {
 }
 
 .content-section h2 {
-  color: #1f2229;
+  color: var(--accent);
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.18;
 }
 
 .content-section h3 {
   margin-top: 42px;
-  color: #22252c;
+  color: var(--accent);
   font-size: 25px;
   line-height: 1.28;
 }
 
 .content-section h4 {
-  color: var(--accent-deep);
+  color: var(--accent);
   font-size: 19px;
   line-height: 1.32;
 }
@@ -341,7 +341,7 @@ h1 {
 
 .generalization-block h5 {
   margin: 0;
-  color: #20242b;
+  color: var(--accent);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.35;
