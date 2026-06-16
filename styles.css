@@ -176,10 +176,17 @@ h1 {
 }
 
 .report-label {
+  display: inline-flex;
   margin: 20px auto 0;
   color: var(--accent-deep);
   font-size: 19px;
   font-weight: 700;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.report-label:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .primary-action {
