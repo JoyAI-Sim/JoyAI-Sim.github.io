@@ -31,26 +31,25 @@
         <span>JoyAI-Sim</span>
       </a>
       <nav class="nav" aria-label="Page navigation">
-        <a href="#framework">Framework</a>
-        <a href="#evaluation">Evaluation</a>
-        <a href="#enrichment">Enrichment</a>
-        <a href="#access">Trial</a>
+        <a href="#framework" data-i18n="nav.framework">Framework</a>
+        <a href="#evaluation" data-i18n="nav.evaluation">Evaluation</a>
+        <a href="#enrichment" data-i18n="nav.enrichment">Enrichment</a>
+        <a href="#access" data-i18n="nav.access">Trial</a>
       </nav>
-      <div class="language">
-        <span>中文</span>
-        <strong>EN</strong>
+      <div class="language" role="group" aria-label="Language switcher">
+        <button class="lang-button" type="button" data-lang-value="zh">中文</button>
+        <button class="lang-button is-active" type="button" data-lang-value="en">EN</button>
       </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <p class="date">04/16/2026</p>
         <h1>JoyAI-Sim</h1>
-        <p class="subtitle">
+        <p class="subtitle" data-i18n="hero.subtitle">
           Simulation transformation toolchain for embodied data pyramid, one-stop realization of value-added conversion
           and generalization amplification of embodied data.
         </p>
-        <p class="report-label">Technical Report</p>
+        <p class="report-label" data-i18n="hero.report">Technical Report</p>
         <figure class="hero-card">
           <img
             src="./assets/media/pdf-page/joysim-overview.png"
@@ -60,14 +59,14 @@
       </section>
 
       <section class="content-section" id="framework">
-        <h2>JoyAI-Sim Framework</h2>
-        <p>
+        <h2 data-i18n="framework.title">JoyAI-Sim Framework</h2>
+        <p data-i18n="framework.p1">
           To address the widely recognized challenges of evaluation efficiency and data bottlenecks in embodied AI, we
           propose the JoyAI-Sim simulation data transformation toolchain, Robot ⇌ Simulation ⇌ Human, built upon the
           embodied data pyramid. This toolchain supports both a top-down Robot → Simulation → Human service for
           efficient model evaluation and a bottom-up Human → Simulation → Robot service for data enrichment.
         </p>
-        <p>
+        <p data-i18n="framework.p2">
           The two transformation pipelines connect, at one end, scarce robot data that closely reflects real-world
           deployment, and at the other end, abundant human data that is not tied to a specific robot embodiment. Together,
           they enable bidirectional integration of data and evaluation. Through the JD Cloud JoyBuilder platform,
@@ -83,13 +82,13 @@
       </section>
 
       <section class="content-section" id="evaluation">
-        <h2>Efficient model evaluation based on simulation tool chain</h2>
+        <h2 data-i18n="evaluation.title">Efficient model evaluation based on simulation tool chain</h2>
         <figure class="video-panel">
           <video controls muted loop playsinline poster="./assets/media/pdf-page/Robot-Sim-Human.jpg">
             <source src="./assets/media/pdf-page/Robot-Sim-Human.mp4" type="video/mp4" />
           </video>
         </figure>
-        <p>
+        <p data-i18n="evaluation.p1">
           Through the Robot → Simulation → Human simulation toolchain, model evaluation can be conducted more efficiently
           than on physical robots. Real robot tasks are used to define deployment-oriented goals, while digital twins
           enable scalable simulation-based evaluation and trajectory synthesis. Human embodied feedback is further
@@ -97,8 +96,8 @@
           that connects physical robot evaluation, simulation evaluation, and human perception.
         </p>
 
-        <h3>Robot → Simulation</h3>
-        <p>
+        <h3 data-i18n="robotsim.title">Robot → Simulation</h3>
+        <p data-i18n="robotsim.p1">
           Using real robot tasks as anchors, task semantics, object assets, scene layouts, robot embodiments, camera
           configurations, control interfaces, and success criteria are mapped into digital twins to construct simulation
           evaluation environments that are reproducible, parallelizable, and diagnosable. JoyAI-Sim builds a Sim-Ready
@@ -114,7 +113,7 @@
             loading="lazy"
           />
         </figure>
-        <p>
+        <p data-i18n="robotsim.p2">
           The simulation environments are further grounded through scene-specific asset construction and alignment.
           JoyAI-Sim reconstructs study-room and living-room household settings as digital twins, so that real-robot
           evaluation targets, object arrangements, and deployment constraints can be faithfully replayed in simulation.
@@ -138,8 +137,8 @@
 
         <div class="detail-section">
           <div class="detail-copy">
-            <h4>Robot-to-Sim Alignment Example</h4>
-            <p>
+            <h4 data-i18n="robotsim.alignTitle">Robot-to-Sim Alignment Example</h4>
+            <p data-i18n="robotsim.alignP">
               This paired rollout uses a real robot task as the anchor and shows the corresponding digital twin
               alignment. The side-by-side view makes the evaluation setting reproducible and easier to diagnose across
               object layout, camera viewpoint, and robot embodiment.
@@ -152,13 +151,13 @@
           </figure>
         </div>
 
-        <h3>Simulation → Human</h3>
+        <h3 data-i18n="simhuman.title">Simulation → Human</h3>
         <figure class="video-panel">
           <video controls muted loop playsinline poster="./assets/media/pdf-page/concat.jpg">
             <source src="./assets/media/pdf-page/concat.mp4" type="video/mp4" />
           </video>
         </figure>
-        <p>
+        <p data-i18n="simhuman.p1">
           In simulation, robot trajectories are generated or augmented using FSM+IK, IKFlow, and reinforcement learning,
           with human embodied feedback further introduced to assess trajectory naturalness. Human operators simulate the
           execution of these trajectories to identify unreasonable patterns in approach strategies, phase transitions,
@@ -173,7 +172,7 @@
             loading="lazy"
           />
         </figure>
-        <p>
+        <p data-i18n="simhuman.p2">
           This flow illustrates how simulated robot trajectories are projected into human-hand space for first-person
           replay and inspection. Human embodied feedback then becomes a practical filter for rejecting awkward yet
           executable trajectories before they are reused for evaluation or training.
@@ -181,8 +180,8 @@
 
         <div class="detail-section">
           <div class="detail-copy">
-            <h4>Human Embodied Feedback</h4>
-            <p>
+            <h4 data-i18n="simhuman.feedbackTitle">Human Embodied Feedback</h4>
+            <p data-i18n="simhuman.feedbackP">
               Synchronized VR recordings expose the human-in-the-loop stage directly: operators inspect approach
               strategies, contact timing, and motion smoothness, then filter behaviors that are physically feasible but
               awkward under embodied human judgment.
@@ -190,25 +189,25 @@
           </div>
           <div class="feedback-grid" aria-label="Synchronized VR human embodied feedback videos">
             <article class="feedback-tile">
-              <strong>Approach Check</strong>
+              <strong data-i18n="simhuman.approach">Approach Check</strong>
               <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-approach.jpg">
                 <source src="./assets/media/plus/vr-feedback-approach.mp4" type="video/mp4" />
               </video>
             </article>
             <article class="feedback-tile">
-              <strong>Phase Transition</strong>
+              <strong data-i18n="simhuman.transition">Phase Transition</strong>
               <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-transition.jpg">
                 <source src="./assets/media/plus/vr-feedback-transition.mp4" type="video/mp4" />
               </video>
             </article>
             <article class="feedback-tile">
-              <strong>Contact Plausibility</strong>
+              <strong data-i18n="simhuman.contact">Contact Plausibility</strong>
               <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-contact.jpg">
                 <source src="./assets/media/plus/vr-feedback-contact.mp4" type="video/mp4" />
               </video>
             </article>
             <article class="feedback-tile">
-              <strong>Motion Smoothness</strong>
+              <strong data-i18n="simhuman.smooth">Motion Smoothness</strong>
               <video autoplay muted loop playsinline poster="./assets/media/plus/vr-feedback-smoothness.jpg">
                 <source src="./assets/media/plus/vr-feedback-smoothness.mp4" type="video/mp4" />
               </video>
@@ -218,8 +217,8 @@
       </section>
 
       <section class="content-section" id="enrichment">
-        <h2>Data Enrichment Service Based on the Simulation Toolchain</h2>
-        <p>
+        <h2 data-i18n="enrichment.title">Data Enrichment Service Based on the Simulation Toolchain</h2>
+        <p data-i18n="enrichment.p1">
           Through the Human → Simulation → Robot simulation toolchain, JoyAI-Sim provides a data enrichment service.
           Using first-person human demonstration videos as the data source, the toolchain leverages hand motion recovery,
           scene reconstruction, and digital twin construction to transform human behaviors that are originally
@@ -233,48 +232,48 @@
             <source src="./assets/media/pdf-page/Human-Sim-Robot.mp4" type="video/mp4" />
           </video>
         </figure>
-        <p>
+        <p data-i18n="enrichment.p2">
           In the Human → Simulation stage, hand trajectories, grasp/release events, object interaction relationships, and
           scene geometry are extracted from human egocentric videos. A simulation-executable digital twin environment is
           then constructed, transforming human videos from purely visual records into simulation instances with spatial
           structure, interaction relationships, and task semantics.
         </p>
-        <p>
+        <p data-i18n="enrichment.p3">
           In the Simulation → Robot stage, robot embodiment adaptation and physical feasibility validation are performed
           in the simulation environment. Actions involving joint-limit violations, collisions, unreachable poses, or
           unreasonable contacts are filtered out. Meanwhile, by varying factors such as object positions, container
           layouts, object combinations, colors and materials, lighting, and backgrounds, diverse yet physically feasible
           robot trajectories and observation videos can be derived from the same human demonstration.
         </p>
-        <p>
+        <p data-i18n="enrichment.p4">
           Ultimately, large-scale, low-cost human behavior data is transformed into high-value training resources that
           are verifiable, extensible, and usable for robot learning.
         </p>
 
         <div class="detail-section generalization-section">
           <div class="detail-copy">
-            <h4>Simulation Generalization Examples</h4>
-            <p>
+            <h4 data-i18n="generalization.title">Simulation Generalization Examples</h4>
+            <p data-i18n="generalization.p">
               Before robot-view observations are exported, the simulator can vary visual conditions while preserving the
               task structure. Lighting and material randomization provide controlled diversity for downstream robot
               learning without changing the underlying trajectory.
             </p>
           </div>
           <div class="generalization-block">
-            <h5>Lighting Generalization</h5>
+            <h5 data-i18n="generalization.light">Lighting Generalization</h5>
             <figure class="video-panel detail-media lighting-panel">
               <video controls muted loop playsinline poster="./assets/media/plus/episode-1000-lighting-generalization.jpg">
                 <source src="./assets/media/plus/episode-1000-lighting-generalization.mp4" type="video/mp4" />
               </video>
               <div class="lighting-labels" aria-hidden="true">
-                <span>Normal</span>
-                <span>Bright</span>
-                <span>Low light</span>
+                <span data-i18n="generalization.normal">Normal</span>
+                <span data-i18n="generalization.bright">Bright</span>
+                <span data-i18n="generalization.low">Low light</span>
               </div>
             </figure>
           </div>
           <div class="generalization-block">
-            <h5>Texture Generalization</h5>
+            <h5 data-i18n="generalization.texture">Texture Generalization</h5>
             <div class="texture-grid" aria-label="Texture generalization examples">
               <figure class="texture-tile">
                 <img src="./assets/media/plus/combo-wall000-desk000.jpg" alt="Wall 000 and desk 000 material variant" loading="lazy" />
@@ -306,8 +305,8 @@
 
         <div class="detail-section">
           <div class="detail-copy">
-            <h4>Simulation-to-Robot Output</h4>
-            <p>
+            <h4 data-i18n="output.title">Simulation-to-Robot Output</h4>
+            <p data-i18n="output.p">
               The resulting output is not just a visualization artifact: it is a robot-centered, multi-view observation
               stream prepared for downstream robot learning. This sample shows the training-ready visual output after
               simulation retargeting and robot-view rendering.
@@ -322,32 +321,32 @@
       </section>
 
       <section class="content-section" id="access">
-        <h2>Trial and Access</h2>
-        <p>
+        <h2 data-i18n="trial.title">Trial and Access</h2>
+        <p data-i18n="trial.p">
           You are welcome to experience the JoyAI-Sim embodied simulation service through the JD Cloud JoyBuilder
           platform:
         </p>
         <div class="link-grid">
-          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">Create a simulation service</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/manage-embodiedsimulation">Manage a simulation service</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/check-embodiedsimulation">View a simulation service</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/embodiedsimulation-isaacsimclient">Connect to a simulation service</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/mountedasset">Mount cloud-based simulation assets</a>
-          <a href="https://docs.jdcloud.com/cn/jdaip/Notebook-Cosmos-Transfer">
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation" data-i18n="trial.create">Create a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/manage-embodiedsimulation" data-i18n="trial.manage">Manage a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/check-embodiedsimulation" data-i18n="trial.view">View a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/embodiedsimulation-isaacsimclient" data-i18n="trial.connect">Connect to a simulation service</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/mountedasset" data-i18n="trial.mount">Mount cloud-based simulation assets</a>
+          <a href="https://docs.jdcloud.com/cn/jdaip/Notebook-Cosmos-Transfer" data-i18n="trial.practice">
             Embodied simulation data augmentation practice case
           </a>
-          <a href="https://robotdata.jdcloud.com/model-dev">Data trading platform</a>
+          <a href="https://robotdata.jdcloud.com/model-dev" data-i18n="trial.market">Data trading platform</a>
         </div>
       </section>
 
       <section class="content-section credits-section" id="authors">
-        <h2>Authors</h2>
+        <h2 data-i18n="authors.title">Authors</h2>
         <div class="author-box">
-          <p>Author list, affiliations, and contribution notes will be added here.</p>
+          <p data-i18n="authors.p">Author list, affiliations, and contribution notes will be added here.</p>
         </div>
 
-        <h2>Citation</h2>
-        <p>
+        <h2 data-i18n="citation.title">Citation</h2>
+        <p data-i18n="citation.p">
           Please cite the arXiv technical report using the following BibTeX entry.
         </p>
         <div class="bibtex-card">
@@ -372,57 +371,25 @@
       </div>
       <div class="footer-columns">
         <div>
-          <strong>Technical Report</strong>
-          <a href="#framework">JoyAI-Sim Framework</a>
-          <a href="#evaluation">Efficient model evaluation</a>
-          <a href="#enrichment">Data enrichment service</a>
+          <strong data-i18n="footer.report">Technical Report</strong>
+          <a href="#framework" data-i18n="footer.framework">JoyAI-Sim Framework</a>
+          <a href="#evaluation" data-i18n="footer.evaluation">Efficient model evaluation</a>
+          <a href="#enrichment" data-i18n="footer.enrichment">Data enrichment service</a>
         </div>
         <div>
-          <strong>Toolchain</strong>
-          <a href="#evaluation">Robot-Simulation-Human</a>
-          <a href="#enrichment">Human-Simulation-Robot</a>
-          <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io">GitHub</a>
+          <strong data-i18n="footer.toolchain">Toolchain</strong>
+          <a href="#evaluation" data-i18n="footer.evalLink">Robot-Simulation-Human</a>
+          <a href="#enrichment" data-i18n="footer.enrichLink">Human-Simulation-Robot</a>
+          <a href="https://github.com/JoyAI-Sim/JoyAI-Sim.github.io" data-i18n="footer.github">GitHub</a>
         </div>
         <div>
-          <strong>Trial</strong>
-          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation">Create simulation service</a>
-          <a href="https://robotdata.jdcloud.com/model-dev">Data trading platform</a>
+          <strong data-i18n="footer.trial">Trial</strong>
+          <a href="https://docs.jdcloud.com/cn/jdaip/create-embodiedsimulation" data-i18n="footer.create">Create simulation service</a>
+          <a href="https://robotdata.jdcloud.com/model-dev" data-i18n="footer.market">Data trading platform</a>
         </div>
       </div>
       <p class="copyright">Copyright © 2026 JoyAI-Sim</p>
     </footer>
-    <script>
-      const feedbackVideos = Array.from(document.querySelectorAll(".feedback-grid video"));
-      const syncFeedbackGrid = () => {
-        if (!feedbackVideos.length) return;
-        feedbackVideos.forEach((video) => {
-          video.muted = true;
-          if (video.readyState >= 1) video.currentTime = Math.min(1.4, Math.max(0, video.duration - 0.2));
-          const playPromise = video.play();
-          if (playPromise) playPromise.catch(() => {});
-        });
-      };
-
-      window.addEventListener("load", syncFeedbackGrid);
-      feedbackVideos.forEach((video) => {
-        video.addEventListener("loadedmetadata", syncFeedbackGrid, { once: true });
-      });
-
-      document.querySelectorAll("[data-copy-target]").forEach((button) => {
-        button.addEventListener("click", async () => {
-          const target = document.getElementById(button.dataset.copyTarget);
-          if (!target) return;
-          try {
-            await navigator.clipboard.writeText(target.innerText);
-            button.textContent = "Copied";
-          } catch {
-            button.textContent = "Copy failed";
-          }
-          window.setTimeout(() => {
-            button.textContent = "Copy";
-          }, 1600);
-        });
-      });
-    </script>
+    <script src="./site.js"></script>
   </body>
 </html>

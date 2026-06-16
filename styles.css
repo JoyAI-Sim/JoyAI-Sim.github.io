@@ -102,16 +102,33 @@ video {
   display: flex;
   justify-self: end;
   align-items: center;
-  gap: 14px;
-  color: #a0a6b2;
+  gap: 10px;
   font-size: 13px;
 }
 
-.language strong {
+.lang-button {
+  border: 0;
+  background: transparent;
+  color: #9ea5b1;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.lang-button:hover {
+  color: #4f5563;
+}
+
+.lang-button.is-active {
   border-radius: 999px;
   background: #f0f2f6;
   color: #22252c;
-  padding: 5px 10px;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 0 18px;
   font-weight: 600;
 }
 
@@ -128,12 +145,6 @@ main {
 .hero {
   padding: 68px 0 22px;
   text-align: center;
-}
-
-.date {
-  margin: 0 0 18px;
-  color: #7d8492;
-  font-size: 14px;
 }
 
 h1,
