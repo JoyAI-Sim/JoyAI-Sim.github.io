@@ -175,16 +175,27 @@ h1 {
   line-height: 1.8;
 }
 
-.report-label {
-  display: inline-flex;
+.report-meta {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
   margin: 20px auto 0;
+}
+
+.report-label,
+.report-link {
   color: var(--accent-deep);
   font-size: 19px;
   font-weight: 700;
+  line-height: 1.35;
   transition: color 160ms ease, transform 160ms ease;
 }
 
-.report-label:hover {
+.report-label {
+  margin: 0;
+}
+
+.report-link:hover {
   color: var(--accent);
   transform: translateY(-1px);
 }
