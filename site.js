@@ -4,8 +4,7 @@ const translations = {
     "nav.evaluation": "Evaluation",
     "nav.enrichment": "Enrichment",
     "nav.access": "Trial",
-    "hero.subtitle":
-      "Simulation transformation toolchain for embodied data pyramid, one-stop realization of value-added conversion and generalization amplification of embodied data.",
+    "hero.subtitle": "仿真技术驱动的具身数据转换工具链，支持模型评测与人机对齐的数据合成。",
     "hero.report": "Technical Report",
     "framework.title": "JoyAI-Sim Framework",
     "framework.p1":
@@ -88,7 +87,7 @@ const translations = {
     "nav.evaluation": "测评",
     "nav.enrichment": "增值服务",
     "nav.access": "试用入口",
-    "hero.subtitle": "面向具身数据金字塔的仿真转换工具链，一站式实现具身数据的增值转换与泛化扩增。",
+    "hero.subtitle": "仿真技术驱动的具身数据转换工具链，支持模型评测与人机对齐的数据合成。",
     "hero.report": "技术报告",
     "framework.title": "JoyAI-Sim 框架",
     "framework.p1":
