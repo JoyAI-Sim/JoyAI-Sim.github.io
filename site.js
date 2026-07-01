@@ -8,15 +8,15 @@ const translations = {
     "hero.report": "Technical Report",
     "framework.title": "JoyAI-Sim Framework",
     "framework.p1":
-      "To address the widely recognized challenges of evaluation efficiency and data bottlenecks in embodied AI, we propose the JoyAI-Sim simulation data transformation toolchain, Robot ⇌ Simulation ⇌ Human, built upon the embodied data pyramid. This toolchain supports both a top-down Robot → Simulation → Human service for efficient model evaluation and a bottom-up Human → Simulation → Robot service for data enrichment.",
+      "JoyAI-Sim builds a simulation-driven data interconversion toolchain centered on JoySim, establishing bidirectional links among robot data, simulation data, and human data: Robot ⇌ Simulation ⇌ Human. The Robot → Simulation → Human path starts from real robot tasks and constructs calibrated digital twins for human-aligned model evaluation and trajectory naturalness checking; the Human → Simulation → Robot path starts from first-person human demonstrations and, after physical feasibility checks in simulation, converts them into robot-oriented trajectories, annotations, and visual observations.",
     "framework.p2":
-      "The two transformation pipelines connect, at one end, scarce robot data that closely reflects real-world deployment, and at the other end, abundant human data that is not tied to a specific robot embodiment. Together, they enable bidirectional integration of data and evaluation. Through the JD Cloud JoyBuilder platform, JoyAI-Sim provides developers with a one-stop embodied simulation service.",
+      "Together, the two paths connect scarce robot data that is close to deployment, scalable and diagnosable simulation data, and abundant human data that cannot be directly executed by robots. In implementation, JoyAI-Sim uses the JD Cloud JoyBuilder platform to provide simulation execution, rendering, photorealism enhancement, and data management services for scalable data generation and model evaluation.",
     "evaluation.title": "Efficient model evaluation based on simulation tool chain",
     "evaluation.p1":
       "Through the Robot → Simulation → Human simulation toolchain, model evaluation can be conducted more efficiently than on physical robots. Real robot tasks are used to define deployment-oriented goals, while digital twins enable scalable simulation-based evaluation and trajectory synthesis. Human embodied feedback is further introduced to assess the naturalness of simulated actions, thereby forming a closed-loop evaluation pipeline that connects physical robot evaluation, simulation evaluation, and human perception.",
     "robotsim.title": "Robot → Simulation",
     "robotsim.p1":
-      "Using real robot tasks as anchors, task semantics, object assets, scene layouts, robot embodiments, camera configurations, control interfaces, and success criteria are mapped into digital twins to construct simulation evaluation environments that are reproducible, parallelizable, and diagnosable. JoyAI-Sim builds a Sim-Ready asset library for household scenarios by integrating 3D reconstruction techniques. The library covers 295 fine-grained categories and 53,661 asset instances, and supports adjustments across multiple simulators along dimensions such as robot states, object layouts, instance variations, backgrounds, language instructions, and lighting.",
+      "Using real robot tasks as anchors, task semantics, object assets, scene layouts, robot embodiments, camera configurations, control interfaces, and success criteria are mapped into digital twins to construct simulation evaluation environments that are reproducible, parallelizable, and diagnosable. JoyAI-Sim builds a Sim-Ready asset library for household scenarios by integrating 3D reconstruction techniques. The library covers 300+ fine-grained categories and 53,661 asset instances, and supports adjustments across multiple simulators along dimensions such as robot states, object layouts, instance variations, backgrounds, language instructions, and lighting.",
     "robotsim.p2":
       "The simulation environments are further grounded through scene-specific asset construction and alignment. JoyAI-Sim reconstructs study-room and living-room household settings as digital twins, so that real-robot evaluation targets, object arrangements, and deployment constraints can be faithfully replayed in simulation.",
     "robotsim.alignTitle": "Robot-to-Sim Alignment Example",
@@ -89,15 +89,15 @@ const translations = {
     "hero.report": "技术报告",
     "framework.title": "JoyAI-Sim 框架",
     "framework.p1":
-      "为应对具身智能领域普遍存在的测评效率与数据瓶颈问题，我们提出基于具身数据金字塔的 JoyAI-Sim 仿真数据转换工具链 Robot ⇌ Simulation ⇌ Human。该工具链同时支持自顶向下的 Robot → Simulation → Human 高效模型测评服务，以及自底向上的 Human → Simulation → Robot 数据增值服务。",
+      "JoyAI-Sim 构建了以 JoySim 为中心的仿真驱动数据互转换工具链，在机器人数据、仿真数据与人类数据之间建立双向连接，即 Robot ⇌ Simulation ⇌ Human。Robot → Simulation → Human 路径从真实机器人任务出发，构建校准数字孪生，用于人机对齐的模型测评与轨迹自然性检查；Human → Simulation → Robot 路径从第一人称人类示教出发，经过仿真环境中的物理可行性检查，转化为面向机器人的轨迹、标注与视觉观测。",
     "framework.p2":
-      "这两条转换链路一端连接稀缺但贴近真实部署的机器人数据，另一端连接丰富但与具体本体无关的人类数据，最终实现数据与测评的双向贯通。依托京东云 JoyBuilder 平台，JoyAI-Sim 为开发者提供一站式具身仿真服务。",
+      "两条路径共同连接稀缺但贴近部署的机器人数据、可扩展且可诊断的仿真数据，以及丰富但不能直接由机器人执行的人类数据。在工程实现上，JoyAI-Sim 通过京东云 JoyBuilder 平台提供仿真执行、渲染、真实感增强和数据管理服务，支撑规模化数据生成与模型测评。",
     "evaluation.title": "基于仿真工具链的高效模型测评",
     "evaluation.p1":
       "通过 Robot → Simulation → Human 仿真工具链，可实现比真机更高效的模型测评。以真实机器人任务定义部署目标，借助数字孪生实现可规模化的仿真评测与轨迹合成，并引入人类具身反馈检验仿真动作的自然度，从而构建一条贯通真机测评、仿真测评与人类感知的闭环评测链路。",
     "robotsim.title": "Robot → Simulation",
     "robotsim.p1":
-      "以真实机器人任务为锚点，将任务语义、物体资产、场景布局、机器人本体、相机配置、控制接口和成功判据映射到数字孪生中，构建可复现、可并行、可诊断的仿真评测环境。JoyAI-Sim 通过综合运用 3D 重建技术构建面向家居场景的 Sim-Ready 资产库，覆盖 295 个细粒度类别、53,661 个资产实例，并支持在多个仿真器中沿机器人状态、物体布局、实例变化、背景、语言指令和光照等维度进行调整。",
+      "以真实机器人任务为锚点，将任务语义、物体资产、场景布局、机器人本体、相机配置、控制接口和成功判据映射到数字孪生中，构建可复现、可并行、可诊断的仿真评测环境。JoyAI-Sim 通过综合运用 3D 重建技术构建面向家居场景的 Sim-Ready 资产库，覆盖 300+ 个细粒度类别、53,661 个资产实例，并支持在多个仿真器中沿机器人状态、物体布局、实例变化、背景、语言指令和光照等维度进行调整。",
     "robotsim.p2":
       "仿真环境进一步通过场景级资产构建与对齐获得真实锚定。JoyAI-Sim 重建了书房与客厅等家居场景数字孪生，使真实机器人测评目标、物体摆放与部署约束能够在仿真中被忠实复现。",
     "robotsim.alignTitle": "Robot-to-Sim 对齐示例",

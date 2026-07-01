@@ -68,16 +68,18 @@
       <section class="content-section" id="framework">
         <h2 data-i18n="framework.title">JoyAI-Sim Framework</h2>
         <p data-i18n="framework.p1">
-          To address the widely recognized challenges of evaluation efficiency and data bottlenecks in embodied AI, we
-          propose the JoyAI-Sim simulation data transformation toolchain, Robot ⇌ Simulation ⇌ Human, built upon the
-          embodied data pyramid. This toolchain supports both a top-down Robot → Simulation → Human service for
-          efficient model evaluation and a bottom-up Human → Simulation → Robot service for data enrichment.
+          JoyAI-Sim builds a simulation-driven data interconversion toolchain centered on JoySim, establishing
+          bidirectional links among robot data, simulation data, and human data: Robot ⇌ Simulation ⇌ Human. The Robot
+          → Simulation → Human path starts from real robot tasks and constructs calibrated digital twins for
+          human-aligned model evaluation and trajectory naturalness checking; the Human → Simulation → Robot path starts
+          from first-person human demonstrations and, after physical feasibility checks in simulation, converts them
+          into robot-oriented trajectories, annotations, and visual observations.
         </p>
         <p data-i18n="framework.p2">
-          The two transformation pipelines connect, at one end, scarce robot data that closely reflects real-world
-          deployment, and at the other end, abundant human data that is not tied to a specific robot embodiment. Together,
-          they enable bidirectional integration of data and evaluation. Through the JD Cloud JoyBuilder platform,
-          JoyAI-Sim provides developers with a one-stop embodied simulation service.
+          Together, the two paths connect scarce robot data that is close to deployment, scalable and diagnosable
+          simulation data, and abundant human data that cannot be directly executed by robots. In implementation,
+          JoyAI-Sim uses the JD Cloud JoyBuilder platform to provide simulation execution, rendering, photorealism
+          enhancement, and data management services for scalable data generation and model evaluation.
         </p>
         <figure class="image-panel">
           <img
@@ -108,7 +110,7 @@
           Using real robot tasks as anchors, task semantics, object assets, scene layouts, robot embodiments, camera
           configurations, control interfaces, and success criteria are mapped into digital twins to construct simulation
           evaluation environments that are reproducible, parallelizable, and diagnosable. JoyAI-Sim builds a Sim-Ready
-          asset library for household scenarios by integrating 3D reconstruction techniques. The library covers 295
+          asset library for household scenarios by integrating 3D reconstruction techniques. The library covers 300+
           fine-grained categories and 53,661 asset instances, and supports adjustments across multiple simulators along
           dimensions such as robot states, object layouts, instance variations, backgrounds, language instructions, and
           lighting.
